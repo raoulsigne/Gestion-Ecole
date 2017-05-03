@@ -1,0 +1,38 @@
+﻿<Window x:Class="Ecole.UI.FicheDePresenceUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Brain : Impréssion des Fiches de présences" Height="230" Width="403" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <StackPanel Height="200" Name="stackPanel1" Width="376" Background="#FFC8DDE2">
+        <GroupBox Header="Informations obligatoires" Height="125" Name="groupBox1" Width="343" HorizontalAlignment="Left" Margin="15,10,0,0">
+            <Grid Height="89" Name="grid1" Width="300" Background="#FF86B5E8">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*" />
+                    <ColumnDefinition Width="70*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="Année scolaire" Height="28" HorizontalAlignment="Left" Margin="0,28,0,0" Name="lblAnneeScolaire" VerticalAlignment="Top" Width="114" Grid.RowSpan="2" />
+                <Label Content="Classe" Height="28" HorizontalAlignment="Left" Name="lblClasse" VerticalAlignment="Top" Width="114" />
+                <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="0,5,0,0" Name="cmbClasse" VerticalAlignment="Top" Width="169"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Height="23" HorizontalAlignment="Left" Margin="0,7,0,0" Name="txtAnnee" VerticalAlignment="Top" Width="62" TextChanged="txtAnnee_TextChanged_1" PreviewTextInput="txtAnnee_PreviewTextInput" />
+                <TextBox Grid.RowSpan="2" Height="23" HorizontalAlignment="Left" Margin="68,7,0,0" Name="txtAnneeScolaire" VerticalAlignment="Top" Width="101" Grid.Column="1" Grid.Row="1" IsEnabled="False" />
+                <RadioButton Content="Hebdomadaire" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="26,3,0,0" Name="radioHebdo" VerticalAlignment="Top" Width="113" Grid.Column="1" />
+                <RadioButton Content="Journalière" Grid.Row="2" Height="20" HorizontalAlignment="Left" Margin="6,3,0,0" Name="radioJour" IsChecked="True" VerticalAlignment="Top" Width="108" />
+            </Grid>
+        </GroupBox>
+        <Grid Height="50" Name="grid3" Width="340" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Imprimer" Height="30" HorizontalAlignment="Left" Margin="20,12,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="130" Click="cmdImprimer_Click" />
+            <Button Content="Fermer" Grid.Column="1" Height="30" HorizontalAlignment="Left" Margin="25,12,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="130" Click="cmdFermer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

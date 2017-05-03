@@ -1,0 +1,197 @@
+﻿<Window x:Class="Ecole.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shool Brain" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized"  ResizeMode="CanResize"  Icon="Images\plume.ico" Background="#FFBBDAEB">
+        <!--Title="Shool Brain" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="CanMinimize" Icon="/Projet%20Ecole;component/EARTH.ICO" Background="LightSkyBlue">-->
+    
+    <DockPanel LastChildFill="True">
+        <Grid Margin="0,0,0,0" DockPanel.Dock="Top">
+            <Ellipse Height="50" HorizontalAlignment="Left" Margin="57,56,0,0" Name="ellipse3" Stroke="Blue" VerticalAlignment="Top" Width="50" />
+            <Menu Height="27" Name="menuTest" VerticalAlignment="Top" IsEnabled="True" IsMainMenu="True" Visibility="Visible">
+                <MenuItem Header="Fichier" Name="mnuFichier">
+                    <MenuItem Header="Nouvelle Nationalité" Name="smnuNationalite" Click="cmdPays_Click"/>
+                    <MenuItem Header="Nouvelle Region" Name="smnuRegion" Click="cmdRegion_Click"/>
+                    <MenuItem Header="Nouveau Département" Name="smnuDepartement" Click="cmdDepartement_Click"/>
+                    <MenuItem Header="Changer mot de passe" Name="smnuChangerMotDePasse" Click="cmdModifierPassword_Click"/>
+                    <MenuItem Header="Fermer session" Name="smnuFermerSession" Click="cmdDeconnexion_Click"/>
+                    <MenuItem Header="Quitter" Name="smnuQuitter" Click="smnuQuitter_Click"/>
+                </MenuItem>
+                <MenuItem Header="Programme" Name="mnuProgramme">
+                    <MenuItem Header="Serie" Name="smnuSerie" Click="cmdSerie_Click"/>
+                    <MenuItem Header="Cycle" Name="smnuCycle" Click="cmdCycle_Click"/>
+                    <MenuItem Header="Type de Classe" Name="smnuTypeClasse" Click="cmdTypeClasse_Click"/>
+                    <MenuItem Header="Définir les Evaluations" Name="smnuEvaluation" Click="cmdTypeEvaluation_Click"/>
+                    <MenuItem Header="Niveau" Name="smnuNiveau" Click="cmdNiveau_Click"/>
+                    <MenuItem Header="Enseignant" Name="smnuEnseignant" Click="cmdEnseignants_Click"/>
+                    <MenuItem Header="Définir les groupes de matières" Name="smnuGroupeMatiere" Click="cmdGroupeMatiere_Click"/>
+                    <MenuItem Header="Matière" Name="smnuMatiere" Click="cmdMatieres_Click"/>
+                    <MenuItem Header="Classe" Name="smnuClasse">
+                        <MenuItem Header="Assistance de creation des classes" Name="ssmnuCreationAssisteClasse" Click="cmdAssistanceCreationClasse"/>
+                        <MenuItem Header="Créer / Modifier" Name="ssmnuEditionClasse" Click="cmdClasse_Click"/>
+                        <MenuItem Header="Définir titulaire" Name="ssmnuTitulaireClasse" Click="cmdTitularisation_Click"/>
+                        <MenuItem Header="Affecter les matières" Name="ssmnuAffecterMatiere" Click="cmdAffecterMatiere_Click"/>
+                        <MenuItem Header="Affecter les Evaluations aux matières" Name="ssmnuEvaluationMatiere" Click="cmdDefinirEvaluation_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Imprimer" Name="smnuImprimer">
+                        <MenuItem Header="Programme d'une classe" Name="ssmnuProgrammeClasse" Click="cmdProgrammeClasse_Click"></MenuItem>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Inscription" Name="mnuInscription">
+                    <MenuItem Header="Catégorie Elève" Name="smnuCategorieEleve" Click="cmdCategorieEleve_Click"/>
+                    <MenuItem Header="Enregistrer un nouvel élève" Name="smnuEditionEleve" Click="cmdEleve_Click"/>
+                    <MenuItem Header="Inscrire un élève" Name="smnuInscrireEleve" Click="cmdInscription_Click"/>
+                    <MenuItem Header="Inscription spéciale" Name="smnuInscriptionSpecial" Click="cmdInscription2_Click"/>
+                    <MenuItem Header="Changement de classe" Name="smnuChangementClasse" Click="cmdChangementClasse"/>
+                    <MenuItem Header="Imprimer" Name="smnuImprimerInscription">
+                        <MenuItem Header="Certificat de scolarité" Name="ssmnuCertificatScolarite" Click="cmdCertificatScolariteClasse"></MenuItem>
+                        <MenuItem Header="Liste des élèves d'une classe" Name="ssmnuListeEleveClasse" Click="cmdListeEleveDuneClasse_Click"></MenuItem>
+                        <MenuItem Header="Liste des classes avec effectifs" Name="ssmnuListeClasse" Click="cmdListeEleveParClasse_Click"></MenuItem>
+                        <!--<MenuItem Header="Certificat de scolarité" Name="ssmnuCertificatScolarite"></MenuItem>-->
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Examen" Name="mnuExamen">
+                    <MenuItem Header="Paramètre Examens" Name="smnuParametreExamen">
+                        <MenuItem Header="Définir les Trimestres" Name="ssmnuTrimestre" Click="cmdTrimestre_Click"></MenuItem>
+                        <MenuItem Header="Définir les Séquence" Name="ssmnuSeauence" Click="cmdSequence_Click"></MenuItem>
+                        <MenuItem Header="Définir les Mentions" Name="ssmnuMention" Click="cmdMention_Click"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Notes" Name="smnuNotes">
+                        <MenuItem Header="Saisie des Anonymats" Name="ssmnuSaisieAnonymats" Click="cmdAnonymat_Click"></MenuItem>
+                        <MenuItem Header="Saisie des notes avec Anonymats" Name="ssmnuSaisieNoteAvecAnonymat" Click="cmdNotesAnonymes_Click"></MenuItem>
+                        <MenuItem Header="Saisie des notes sans Anonymats" Name="ssmnuSaisieNoteSansAnonymat" Click="cmdNotesSansAnonymat_Click"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Générer les résultats" Name="smnuGenererResultat">
+                        <MenuItem Header="Séquentiel" Name="ssmnuResultatSequentiel" Click="cmdResultatsSequentiels_Click"></MenuItem>
+                        <MenuItem Header="Trimestriel" Name="ssmnuResultatTrimestriel" Click="cmdTrimestriels_Click"></MenuItem>
+                        <MenuItem Header="Annuel" Name="ssmnuResultatAnnuel" Click="cmdResultatsAnnuels_Click"></MenuItem>
+                        <MenuItem Header="Pour un élève" Name="ssmnuPourUnEleve" Click="cmdRecalculResultatEleve_Click"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Conseil de Classe" Name="smnuConseilDeClasse" Click="cmdConseil_Click"></MenuItem>
+                    <MenuItem Header="Saisie des appréciations" Name="smnuSaisieAppreciation">
+                        <MenuItem Header="Appréciation des moyennes" Name="ssnuSaisieAppreciationMoyenne" Click="cmbAppreciationMoyenne_Click"/>
+                        <MenuItem Header="Appréciation des résultats" Name="ssnuSaisieAppreciationResultat" Click="cmbAppreciationResultat_Click"/>
+                    </MenuItem>
+
+                    <MenuItem Header="Imprimer" Name="smnuImprimerResultat">
+                        <MenuItem Header="Fiche de report de notes" Name="ssmnuFicheReportNotes" Click="cmdFicheReportNotes"/>
+                        <MenuItem Header="Fiche de report de notes simplifiee" Name="ssmnuFicheReportNotesSimplifie" Click="cmdFicheReportNotes2"/>
+                        <MenuItem Header="Bulletins de notes" Name="ssmnuBulletin">
+                            <MenuItem Header="Séquentiel" Name="sssmnuSequentiel" Click="cmdBulletinSequentiel_Click" />
+                            <MenuItem Header="Trimestriel" Name="sssmnuTrimestriel" Click="cmdBulletinTrimestriel_Click"/>
+                            <MenuItem Header="Annuel" Name="sssmnuAnnuel" Click="cmdBulletinAnnuel_Click" />
+                        </MenuItem>
+                        <MenuItem Header="Récapitulatif des notes" Name="ssmnuRecapitulatifNotes">
+                            <MenuItem Header="Séquentiel" Name="sssmnuRecapitulatifSequentiel" Click="cmdRecapSequentiel_Click"/>
+                            <MenuItem Header="Trimestriel" Name="sssmnuRecapitulatifTrimestriel" Click="cmdRecapTrimestriel_Click"/>
+                            <MenuItem Header="Annuel" Name="sssmnuRecapitulatifAnnuel" Click="cmdRecapAnnuel_Click"/>
+                        </MenuItem>
+                        <MenuItem Header="Etat des moyennes" Name="ssmnuEtatMoyennes">
+                            <MenuItem Header="Séquentiel" Name="sssmnuMoyennesSequentiel" Click="cmdMoyenneSequentielle_Click"/>
+                            <MenuItem Header="Trimestriel" Name="sssmnuMoyennesTrimestriel" Click="cmdMoyenneTrimestrielle_Click"/>
+                            <MenuItem Header="Annuel" Name="sssmnuMoyennesAnnuel" Click="cmdMoyennesAnnuelles_Click"/>
+                        </MenuItem>
+                        <MenuItem Header="Profil Scolaire" Name="ssmnuProfilScolaire" Click="cmdProfilScolaire_Click"/>
+                        <MenuItem Header="Bilan Sequentiel" Name="ssmnuBilanSequentiel" Click="cmdBilanSequentiel_Click"/>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Statistique" Name="mnuStatistique">
+                    <MenuItem Header="Taux de validation des matières d'une classe" Name="smnuComparaisonMatiere" Click="cmdComparaisonMatiere"></MenuItem>
+                    <MenuItem Header="Taux de réussite par classe" Name="smnuComparaisonResultatClasse" Click="cmdComparaisonResultatClasse"/>
+                    <MenuItem Header="Taux de réussite par niveau" Name="smnuComparaisonResultatNiveau" Click="cmdComparaisonResultatNiveau"/>
+                    <MenuItem Header="Progression des résultats d'une classe" Name="smnuProgressionClasse" Click="cmdProgressionClasse"/>
+                    <MenuItem Header="Variation des résultats par matières d'une classe" Name="smnuVariationPeriodiqueMatiere" Click="cmdComparaisonMatierePeriodique"></MenuItem>
+                    <MenuItem Header="Bilan des résultats par classe" Name="smnuGenererStatClasse" Click="cmdGenererStatClasse"></MenuItem>
+                    <MenuItem Header="Bilan des résultats par niveau" Name="smnuGenererStatNiveau" Click="cmdGenererStatNiveau"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Discipline" Name="mnuDiscipline">
+                    <MenuItem Header="Définir les éléments" Name="smnuElementDiscipline" Click="cmdDiscipline_Click"></MenuItem>
+                    <MenuItem Header="Saisie des sanctions" Name="smnuSaisieSanction" Click="cmdSanctionClasse_Click"></MenuItem>
+                    <MenuItem Header="Justificatif des sanctions" Name="smnuJustificationSanction" Click="cmdSanctionnereleve_Click"></MenuItem>
+                    <MenuItem Header="Imprimer" Name="smnuImprimerDiscipline">
+                        <MenuItem Header="Fiche de présences" Name="ssmnuFichePresence" Click="cmdFichePresence"></MenuItem>
+                        <MenuItem Header="Fiche disciplinaire" Name="ssmnuFicheDisciplinaire" Click="cmdFicheDiscipline"/>
+                        <MenuItem Header="Historique des sanctions d'une Classe" Name="sssmnuEtatDisciplinaireClasse" Click="cmdSanctionClasse_Click"/>
+                        <MenuItem Header="Historique des sanctions d'un Elève" Name="sssmnuEtatDisciplinaireEleve" Click="cmdSanctionnereleve_Click"/>
+                        <MenuItem Header="Etat des sanctions d'une classe" Name="sssmnuEtatSanctionClasse" Click="cmdEtatSanctionClasse_Click"/>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Caisse" Name="mnuCaisse">
+                    <MenuItem Header="Paramètres de la Caisse" Name="smnuParametreCaisse">
+                        <MenuItem Header="Définir les Tranches" Name="ssmnuDefinirTranche" Click="cmdTranche_Click"/>
+                        <MenuItem Header="Définir les Prestations" Name="ssmnuDefinirPrestation" Click="cmdPrestation_Click"/>
+                        <MenuItem Header="Montant des Tranches" Name="ssmnuMontantTranches" Click="cmdMontantTranche_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Opérations" Name="smnuOperations" Click="caisse_Click"/>
+                    <MenuItem Header="Paiement prestation" Name="smnuPaiementPrestation" Click="cmdPayerPrestation_Click"></MenuItem>
+                    <!--<MenuItem Header="Vente Article" Name="smnuVenteArticle" Click="cmdVenteArticle_Click"></MenuItem>-->
+                    <!--<MenuItem Header="Annuler une Vente d'article" Name="smnuAnnulerVenteArticle" Click="cmdAnnulerVenteArticle"></MenuItem>-->
+                    <MenuItem Header="Etat de le Caisse" Name="smnuEtatCaisse" Click="cmdCaisse_Click"></MenuItem>
+                    <MenuItem Header="Imprimer" Name="smnuImprimerCaisse">
+                        <MenuItem Header="Bilan financier" Name="ssmnuImprimerBilanFinancier" Click="cmdBilanFinancier"/>
+                        <!--<MenuItem Header="Historique de la Caisse" Name="ssmnuImprimerHistoriqueCaisse" Click="cmdHistoriqueCaisse_Click"/>-->
+                        <MenuItem Header="Etat de la Caisse" Name="ssmnuImprimerEtatCaisse" Click="cmdCaisse_Click"/>
+                        <!--<MenuItem Header="Etat des opérations et scolarité" Name="ssmnuImprimerEtatOpPrestation" Click="cmdEtatOperation_Prestation"/>-->
+                        <MenuItem Header="Bilan de vente des prestations" Name="ssmnuImprimerBilanVentePrestation" Click="cmdEtatPrestation"/>
+                        <MenuItem Header="Bilan des versements" Name="ssmnuImprimerBilanVersement" Click="cmdEtatVersement"/>
+                        <MenuItem Header="Bilan des opérations" Name="ssmnuImprimerBilanOperation" Click="cmdEtatOperation"/>
+                        <MenuItem Header="Situation financière d'un élève" Name="ssmnuImprimerEtatFinancierEleve" Click="statutFinancier"/>
+                        <MenuItem Header="Situation financière d'une classe" Name="ssmnuImprimerSituationFinancierClasse" Click="cmdSituationFinanciereClasse_Click"/>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Notification" Name="mnuNotification">
+                    <MenuItem Header="Envoyer un message" Name="smnuMessage" Click="cmdNotificationSMS_Email"/>
+                </MenuItem>
+                <!--<MenuItem Header="Stock" Name="mnuStock">
+                    <MenuItem Header="Magasin" Name="smnuMagasin" Click="cmdMagasin_Click"></MenuItem>
+                    <MenuItem Header="Catégorie Article" Name="smnuCatégorieArticle" Click="cmdCategorieArticle_Click"></MenuItem>
+                    <MenuItem Header="Article" Name="smnuArticle">
+                        <MenuItem Header="Nouvel article" Name="ssmnuNouveauArticle" Click="cmdEnregistrementArticle_Click"/>
+                        <MenuItem Header="Approvisionnement" Name="ssmnuReapprovisionnement" Click="cmdApprovisionnement_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Set Articles" Name="smnuSetArticles">
+                        <MenuItem Header="Nouveau Set" Name="ssmnuNouveauSetArticle" Click="cmdAddSetArticle_Click"/>
+                        <MenuItem Header="Modifier un Set" Name="ssmnuModifierSetArticle" Click="cmdEditSetArticle_Click"/>
+                    </MenuItem>
+                    <MenuItem Header="Sortir d'articles du magasin" Name="smnuSortieArticle" Click="cmdSortirArticle"></MenuItem>
+                    <MenuItem Header="Etat Stock" Name="smnuEtatStock" Click="cmdEtatStock_Click"></MenuItem>
+                    <MenuItem Header="Imprimer" Name="smnuImprimerStock">
+                        <MenuItem Header="Bilan de vente des articles" Name="ssmnuImprimerBilanVenteArticle" Click="cmdEtatVenteArticle"/>
+                    </MenuItem>
+                </MenuItem>-->
+                <MenuItem Header="Options" Name="mnuOptions">
+                    <MenuItem Header="Paramétrer l'application" Name="smnuParametrerApplication" Click="cmdParametre_Click"></MenuItem>
+                    <MenuItem Header="Configurer le serveur de notification" Name="smnuConfigurerNotification" Click="cmdConfigureNotificationSMS_Email"></MenuItem>
+                    <MenuItem Header="Administration" Name="smnuAdministration">
+                        <MenuItem Header="Groupe d'utilisateurs" Name="ssmnuGroupeUtilisateur" Click="cmdGroupeutilisateur_Click"/>
+                        <MenuItem Header="Utilisateurs" Name="ssmnuUtilisateur" Click="cmdUtilisateur_Click"/>
+                        <MenuItem Header="Attribuer des privilèges" Name="ssmnuAttribuerPrivileges" Click="cmdAttribuerPrivilire_click"/>
+                    </MenuItem>
+                    <MenuItem Header="Journal du Système" Name="smnuJournalSysteme" Click="cmdJournalisation"></MenuItem>
+                    <MenuItem Header="Journal de la caisse" Name="smnuJournalCaisse" Click="smnuJournalCaisse_Click"></MenuItem>
+                    <MenuItem Header="Configuration du serveur" Name="smnuConfigServeur" Click="cmbEditInfosDemarrage_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Aide" Name="mnuAide">
+                    <MenuItem Header="Sommaire" Name="smnuSommaire"/>
+                    <MenuItem Header="Rechercher" Name="smnuRechercher"/>
+                    <MenuItem Header="A propos" Name="smnuAPropos"/>
+                    <MenuItem Header="Equipe" Name="smnuEquipe" Click="cmdEquipe"/>
+                </MenuItem>
+            </Menu>
+            <Label Content="Brain Studio" FontFamily="Arial" FontSize="17" FontStretch="Normal" FontWeight="Normal" Foreground="DarkBlue" Height="31" HorizontalAlignment="Left" Margin="113,56,0,0" Name="label1" VerticalAlignment="Top" Width="131" />
+            <Label Content="School Brain" FontSize="72"  FontWeight="Bold" Foreground="DarkBlue" Height="150" HorizontalAlignment="Left" Margin="424,261,0,0" Name="label2" VerticalAlignment="Top" Width="452" />
+            <Rectangle Height="100" HorizontalAlignment="Left" Margin="311,253,0,0" Name="rectangle1" Stroke="OrangeRed" VerticalAlignment="Top" Width="100" />
+            <Rectangle Height="100" HorizontalAlignment="Left" Margin="311,369,0,0" Name="rectangle2" Stroke="Lime" VerticalAlignment="Top" Width="100" />
+            <Rectangle Height="100" HorizontalAlignment="Left" Margin="268,309,0,0" Name="rectangle3" Stroke="Blue" VerticalAlignment="Top" Width="100" />
+            <Ellipse Height="50" HorizontalAlignment="Left" Margin="31,56,0,0" Name="ellipse1" Stroke="OrangeRed" VerticalAlignment="Top" Width="50" />
+            <Ellipse Fill="OrangeRed" Height="15" HorizontalAlignment="Left" Margin="854,362,0,0" Name="eliPleinOrg" Stroke="OrangeRed" VerticalAlignment="Top" Visibility="Visible" Width="16" />
+            <Ellipse Fill="LawnGreen" Height="15" HorizontalAlignment="Left" Margin="932,362,0,0" Name="eliPleinVert" Stroke="LawnGreen" VerticalAlignment="Top" Visibility="Visible" Width="15" />
+            <Ellipse Fill="Blue" Height="15" HorizontalAlignment="Left" Margin="891,362,0,0" Name="eliPleinBleu" Stroke="Blue" VerticalAlignment="Top" Visibility="Visible" Width="15" />
+            <Ellipse Height="50" HorizontalAlignment="Left" Margin="43,80,0,0" Name="ellipse2" Stroke="LawnGreen" VerticalAlignment="Top" Width="50" />
+            <Label Content="Licence d'utilisation accordée à :" FontSize="15" HorizontalAlignment="Left" Margin="469,374,0,60" Name="label4" Width="233" Visibility="Visible" />
+            <Label FontFamily="Calibri" FontSize="20"  FontStretch="Normal" FontStyle="Normal" FontWeight="Normal" Foreground="DarkRed" Height="41" HorizontalAlignment="Left" Margin="470,397,0,0" Name="lblSociete" VerticalAlignment="Top" Width="370" Visibility="Visible" />
+        </Grid>
+
+        <!--<StatusBar Height="23" HorizontalAlignment="Left" Margin="0,493,0,0" Name="statusBar1" VerticalAlignment="Top" Width="120" />-->
+        <StatusBar Height="30" Name="barEtat" DockPanel.Dock="Bottom"  VerticalAlignment="Bottom"> </StatusBar>
+    </DockPanel>
+</Window>

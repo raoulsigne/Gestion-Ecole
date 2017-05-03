@@ -1,0 +1,98 @@
+﻿<Window x:Class="Ecole.UI.WindowAddEditSequenceUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Creer / Editer des Séquences" Height="638" Width="633" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <Grid Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="607" Height="598">
+        <StackPanel Orientation="Horizontal" Margin="-2,3,23,418">
+            <GroupBox Header="Informations obligatoires" Height="159" Name="groupBox1" Width="380" Margin="15,5">
+                <Grid Height="121" Name="grid1" Width="342" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="124*" />
+                        <ColumnDefinition Width="218*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="0,3,0,0" Name="txtCode" VerticalAlignment="Top" Width="184" Grid.Column="1" />
+                    <TextBox Height="22" HorizontalAlignment="Left" Name="txtNom" VerticalAlignment="Top" Width="184" Grid.Column="1" Margin="0,46,0,0" Grid.RowSpan="2" />
+                    <Label Content="Code (*)" Height="28" HorizontalAlignment="Left" Margin="0,-1,0,0" Name="lblCode" VerticalAlignment="Top" Width="97" />
+                    <Label Content="Nom (*)" Height="28" HorizontalAlignment="Left" Name="lblNom" VerticalAlignment="Top" Width="95" Margin="0,45,0,0" Grid.RowSpan="2" />
+                    <Label Content="Trimestre (*)" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="6,20,0,0" Name="lblTrimestre" VerticalAlignment="Top" />
+                    <ComboBox Grid.Column="1" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="2,20,0,0" Name="cmbTrimestre" VerticalAlignment="Top" Width="182" />
+                </Grid>
+            </GroupBox>
+            <Grid Height="106" Name="grid2" Width="118" Margin="10" Background="#FF86B5E8">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="36*" />
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="74*" />
+                </Grid.ColumnDefinitions>
+                <Button Content="Valider" Height="24" HorizontalAlignment="Left" Margin="6,19,0,0" Name="cmdValider" VerticalAlignment="Top" Width="106" Click="cmdValider_Click" Grid.ColumnSpan="3" />
+                <Button Content="Annuler" Height="24" Name="cmdAnnuler" Width="106" Click="cmdAnnuler_Click" Grid.ColumnSpan="3" Margin="6,16,6,13" Grid.Row="1" />
+            </Grid>
+        </StackPanel>
+        <Grid Height="40" Name="gridAction" Margin="15,194,24,364" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="88*" />
+                <ColumnDefinition Width="200*" />
+                <ColumnDefinition Width="144*" />
+                <ColumnDefinition Width="144*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Code" Height="28" HorizontalAlignment="Left" Margin="0,6,0,0" Name="lblFilterCode" VerticalAlignment="Top" Width="80" />
+            <ComboBox Height="25" HorizontalAlignment="Left" Margin="47,6,0,0" Name="cmbFilterCode" VerticalAlignment="Top" Width="129" SelectionChanged="cmbFilterCode_SelectionChanged" Grid.ColumnSpan="2" />
+            <ComboBox Height="25" HorizontalAlignment="Left" Margin="147,6,0,0" Name="cmbFilterNom" VerticalAlignment="Top" Width="135" SelectionChanged="cmbFilterNom_SelectionChanged" Grid.Column="1" Grid.ColumnSpan="2" />
+            <Label Content="Nom" Height="28" HorizontalAlignment="Left" Margin="107,6,0,0" Name="lblFilterNom" VerticalAlignment="Top" Grid.Column="1" />
+            <Label Content="Trimestre" Grid.Column="2" Height="28" HorizontalAlignment="Left" Margin="91,6,0,0" Name="lblFilterTrimestre" VerticalAlignment="Top" Width="64" Grid.ColumnSpan="2" />
+            <ComboBox Grid.Column="3" Height="25" HorizontalAlignment="Left" Margin="16,6,0,0" Name="cmbFilterTrimestre" VerticalAlignment="Top" Width="120" SelectionChanged="cmbFilterTrimestre_SelectionChanged" />
+        </Grid>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Height="298" HorizontalAlignment="Left" Margin="15,234,0,0" Name="grdListeSequence" VerticalAlignment="Top" Width="567" ItemsSource="{Binding ListeSequences}" KeyUp="grdListeSequence_KeyUp" MouseDoubleClick="grdListeSequence_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding codeseq}" Header="Code" Width="140" />
+                <DataGridTextColumn Binding="{Binding nomseq}" Header="Nom" Width="275" />
+                <DataGridTextColumn Binding="{Binding codetrimestre}" Header="Code Trimestre" Width="140" />
+            </DataGrid.Columns>
+
+            <!--<DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Update" x:Name="btnUpdate"
+                                Click="btnUpdate_Click"></Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+            <DataGridTemplateColumn>
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Button Content="Delete" x:Name="btnDelete"
+                                Click="btnDelete_Click"></Button>
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>-->
+        </DataGrid>
+        <Grid Height="40" Name="grid" Margin="-2,554,1,0" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="182*" />
+                <ColumnDefinition Width="88*" />
+                <ColumnDefinition Width="95*" />
+                <ColumnDefinition Width="175*" />
+            </Grid.ColumnDefinitions>
+            <Button Content="Fermer" Height="29" HorizontalAlignment="Left" Margin="23,5,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="152" Click="cmdFermer_Click" Grid.Column="3" />
+            <Button Content="Imprimer" Height="28" HorizontalAlignment="Left" Margin="17,6,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="142" Click="cmdImprimer_Click" />
+        </Grid>
+    </Grid>
+</Window>

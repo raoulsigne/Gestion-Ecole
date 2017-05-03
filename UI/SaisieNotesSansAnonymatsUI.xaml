@@ -1,0 +1,73 @@
+﻿<Window x:Class="Ecole.UI.SaisieNotesSansAnonymatsUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Brain : Saisie des notes" Height="632" Width="932" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <StackPanel Height="594" Name="stackPanel1" Width="908" Background="#FFC8DDE2">
+        <GroupBox Header="Critères de sélection" Height="130" Name="groupBox1" Width="884" HorizontalAlignment="Left" Margin="15,10,0,0">
+            <Grid Height="89" Name="grid1" Width="868" Background="#FF86B5E8">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Content="Classe" Height="28" HorizontalAlignment="Left" Name="lblClasse" VerticalAlignment="Top" Width="145" HorizontalContentAlignment="Center" />
+                <Label Content="Matiere" Height="28" HorizontalAlignment="Right" Name="lblMatiere" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="145" HorizontalContentAlignment="Center" />
+                <Label Content="Evaluation" Grid.Column="3" Height="28" HorizontalAlignment="Left" Name="lblEvaluation" VerticalAlignment="Top" Width="144" HorizontalContentAlignment="Center" />
+                <Label Content="Sequence" Grid.Column="2" Height="28" Name="lblSequence" VerticalAlignment="Top" Margin="1,0,0,0" HorizontalContentAlignment="Center" />
+                <Label Content="Année" Grid.Column="4" Height="28" HorizontalAlignment="Left" Name="lblAnnee" VerticalAlignment="Top" Width="141" HorizontalContentAlignment="Center" />
+                <Label Content="Note sur" Grid.Column="5" Height="28" HorizontalAlignment="Left" Margin="3,2,0,0" Name="lblBareme" VerticalAlignment="Top" Width="142" HorizontalContentAlignment="Center" />
+                <ComboBox Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="15,0,0,0" Name="cmbClasse" VerticalAlignment="Top" Width="120" DropDownClosed="cmbClasse_DropDownClosed" />
+                <ComboBox Grid.Column="1" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="15,0,0,0" Name="cmbMatiere" VerticalAlignment="Top" Width="120" DropDownClosed="cmbMatiere_DropDownClosed" />
+                <ComboBox Grid.Column="3" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="12,1,0,0" Name="cmbEvaluation" VerticalAlignment="Top" Width="120" />
+                <ComboBox Grid.Column="2" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="6,0,0,0" Name="cmbSequence" VerticalAlignment="Top" Width="120" DropDownClosed="cmbSequence_DropDownClosed" />
+                <ComboBox Grid.Column="5" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="18,0,0,0" Name="cmbBareme" VerticalAlignment="Top" Width="120" DropDownClosed="cmbBareme_DropDownClosed" />
+                <TextBox IsEnabled="False" Grid.Column="4" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="61,1,0,0" Name="txtAnnee" VerticalAlignment="Top" Width="81" KeyUp="txtAnnee_KeyUp" />
+                <Button Content="Ré-initialiser" Grid.Column="1" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="15,6,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="120" Click="cmdAnnuler_Click" />
+                <Button Content="OK" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="15,6,0,0" Name="cmdOK" VerticalAlignment="Top" Width="120" Click="cmdOK_Click" />
+                <TextBox Height="23" HorizontalAlignment="Left" Name="txtAnneeScolaire" VerticalAlignment="Top" Width="52" Grid.Column="4" Grid.Row="1" Margin="4,0,0,0" TextChanged="txtAnneeScolaire_TextChanged" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" />
+            </Grid>
+        </GroupBox>
+        <Label Content="Liste des élèves concernés" Height="28" Name="label1" Width="665" Margin="20,20,0,0" HorizontalAlignment="Left" 
+               Background="#FF86B5E8" HorizontalContentAlignment="Center" />
+        <Grid>
+            <DataGrid AutoGenerateColumns="False" Height="343" Name="grdListe" Width="665" VerticalScrollBarVisibility="Visible" SelectionMode="Single" SelectionUnit="Cell"
+                  CanUserAddRows="False" HorizontalAlignment="Left" Margin="20,0,0,0" PreviewKeyDown="grdListe_PreviewKeyDown" VirtualizingStackPanel.IsVirtualizing="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding numero}" Header="N°"
+                      IsReadOnly="True" x:Name="grdNumero" Width="100">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding nom}" Header="Nom et Prenoms"
+                      IsReadOnly="True" x:Name="grdNom" Width="300">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding matricule}"
+                      Header="Matricule" x:Name="grdMatricule" IsReadOnly="True" Width="120">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding notes}"
+                      Header="Notes" x:Name="grdNotes" IsReadOnly="False" Width="120">
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Image Height="67" Margin="749,0,11,276" Name="image1" Source="/School%20Brain;component/Images/Logo-Brain-Studio.png" Stretch="Fill" Width="148" />
+            <Image Height="67" Margin="754,276,6,0" Name="image2" Source="/School%20Brain;component/Images/Logo-Brain-Studio.png" Stretch="Fill" Width="148" />
+        </Grid>
+        <Grid Height="41" Name="grid3" Width="909" Background="#FF86B5E8" Margin="0,20">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Imprimer" Height="23" HorizontalAlignment="Left" Margin="23,13,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="150" Click="cmdImprimer_Click" />
+            <Button Content="Fermer" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="283,13,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="146" Click="cmdFermer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

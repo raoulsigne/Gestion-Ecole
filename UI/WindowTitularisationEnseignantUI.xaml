@@ -1,0 +1,58 @@
+﻿<Window x:Class="Ecole.UI.WindowTitularisationEnseignantUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Titularisation des Enseigants" Height="668" Width="620" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <Grid Width="596" Height="621"  Background="#FFC8DDE2">
+        <StackPanel Orientation="Horizontal" Margin="0,12,190,475">
+            <GroupBox Header="Informations" Height="125" HorizontalAlignment="Left" Margin="14,0,0,0" Name="groupBox1" VerticalAlignment="Top" Width="364">
+                <Grid Height="89" Name="grid1" Width="342" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="105*" />
+                        <ColumnDefinition Width="237*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Classe (*)" Height="28" HorizontalAlignment="Left" Name="lblClasse" VerticalAlignment="Top" Width="93" Grid.Row="1" Margin="0,3,0,0" Grid.RowSpan="2" />
+                    <Label Content="Titulaire (*)" HorizontalAlignment="Left" Margin="0,2,0,0" Name="lblCode" Height="28" VerticalAlignment="Top" Grid.Row="2" Width="93" />
+                    <ComboBox Height="24" HorizontalAlignment="Left" Name="cmbClasse" VerticalAlignment="Top" Width="188" SelectionChanged="cmbClasse_SelectionChanged" Grid.Column="1" Grid.Row="1" Margin="0,5,0,0" />
+                    <ComboBox Name="cmbTitulaire" Margin="0,3,49,3" Grid.Column="1" Grid.Row="2" />
+                    <Label Content="Année (*)" Height="28" HorizontalAlignment="Left" Name="lblNom" VerticalAlignment="Bottom" Width="93" Margin="0,0,0,27" Grid.RowSpan="2" />
+                    <TextBox Height="23" Margin="0,8,182,0" Name="txtAnneeScolaire" VerticalAlignment="Top" TextChanged="txtAnneeScolaire_TextChanged" Grid.Column="1" Grid.RowSpan="2" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" KeyUp="txtAnneeScolaire_KeyUp"/>
+                    <Label Content="/" Height="23" HorizontalAlignment="Right" Margin="0,7,164,0" Name="label7" VerticalAlignment="Top" Width="17" Grid.Column="1" />
+                    <TextBox IsEnabled="False" Height="23" Name="txtAnnee" PreviewTextInput="txtAnnee_PreviewTextInput" TextChanged="txtAnnee_TextChanged" Grid.Column="1" Margin="72,8,0,28" KeyUp="txtAnnee_KeyUp" HorizontalAlignment="Left" Width="70" Grid.RowSpan="2" />
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+        <Grid Name="grid2" Margin="423,35,79,496" Background="#FF86B5E8" >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Annuler" Height="23" HorizontalAlignment="Left" Margin="1,1,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="87" Click="cmdAnnuler_Click" Grid.Row="2" />
+            <Button Content="Valider" Height="23" HorizontalAlignment="Left" Margin="1,8,0,0" Name="button1" VerticalAlignment="Top" Width="87" Click="cmdEnregistrer_Click" Grid.RowSpan="2" />
+        </Grid>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Name="grdListeTitulaire" Width="566" ItemsSource="{Binding ListeTitulaires}" KeyUp="grdListeTitulaire_KeyUp" MouseDoubleClick="grdListeTitulaire_MouseDoubleClick" Margin="12,163,18,92" VirtualizingStackPanel.IsVirtualizing="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding codeClasse}" Header="Classe" Width="140" />
+                <DataGridTextColumn Binding="{Binding codeProf}" Header="Matricule Interne" Width="100" />
+                <DataGridTextColumn Binding="{Binding enseignant.nomProf}" Header="Nom Enseignant" Width="280" />
+                <DataGridTextColumn Binding="{Binding annee}" Header="Année" Width="50" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Height="43" HorizontalAlignment="Left" Margin="0,576,0,0" Name="grid3" VerticalAlignment="Top" Width="596" Background="#FF86B5E8">
+            <Button Content="Imprimer la liste" Height="31" HorizontalAlignment="Left" Margin="43,6,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="160" Click="cmdImprimer_Click" />
+            <Button Content="Fermer" Height="31" HorizontalAlignment="Left" Margin="337,6,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="160" Click="cmdFermer_Click" />
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="Ecole.UI.WindowGetEtatStockArticleUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Obtenir l'état du stock d'articles" Height="677" Width="997" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" >
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <Grid Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="989" Height="638">
+        <Rectangle Height="124" HorizontalAlignment="Left" Margin="10,7,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="311" Fill="#FF86B5E8" />
+        <Label Content="Catégorie Article (*)" Height="28" HorizontalAlignment="Left" Margin="27,14,0,0" Name="lblCategorieArticle" VerticalAlignment="Top" Width="114" />
+        <ComboBox Height="28" HorizontalAlignment="Left" Margin="144,14,0,0" Name="cmbCategorieArticle" VerticalAlignment="Top" Width="157" SelectionChanged="cmbCategorieArticle_SelectionChanged" />
+        <Button Content="Valider" Height="25" HorizontalAlignment="Left" Margin="27,98,0,0" Name="cmdValider" VerticalAlignment="Top" Width="114" Click="cmdValider_Click" />
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Height="407" HorizontalAlignment="Left" Margin="10,148,0,0" Name="GrdListEtatStock" VerticalAlignment="Top" Width="964" ItemsSource="{Binding ListeEtatStocks}" VirtualizingStackPanel.IsVirtualizing="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding dateOperationString}" Header="Date Opération" Width="100" />
+                <DataGridTextColumn Binding="{Binding codeMagasin}" Header="Magasin" Width="100" />
+                <DataGridTextColumn Binding="{Binding codeArticle}" Header="Article" Width="100" />
+                <DataGridTextColumn Binding="{Binding designationArticle}" Header="Désignation" Width="200" />
+                <DataGridTextColumn Binding="{Binding stockDebut}" Header="Stock Debut exercice" Width="150" />
+                <DataGridTextColumn Binding="{Binding quantiteAchetee}" Header="Quantité achetée" Width="100" />
+                <DataGridTextColumn Binding="{Binding quantiteVendue}" Header="Quantité Vendue" Width="100" />
+                <!--<DataGridTextColumn Binding="{Binding puArticle}" Header="Prix unitaire" Width="100" />-->
+                <DataGridTextColumn Binding="{Binding stockRestant}" Header="Stock Restant" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Height="50" HorizontalAlignment="Left" Margin="0,586,0,0" Name="grid1" VerticalAlignment="Top" Width="985" Background="#FF86B5E8">
+            <Button Content="Fermer" Height="32" HorizontalAlignment="Left" Name="cmdFermer" VerticalAlignment="Top" Width="112" Margin="571,9,0,0" Click="cmdFermer_Click" />
+            <Button Content="Imprimer" Height="32" HorizontalAlignment="Left" Margin="10,9,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="122" Click="cmdImprimer_Click" />
+        </Grid>
+        <Label Content="Article (*)" Height="28" HorizontalAlignment="Left" Margin="81,48,0,0" Name="label1" VerticalAlignment="Top" />
+        <ComboBox Height="28" HorizontalAlignment="Left" Margin="144,48,0,0" Name="cmbArticle" VerticalAlignment="Top" Width="157" SelectionChanged="cmbArticle_SelectionChanged" />
+        <Button Content="Annuler" Height="24" HorizontalAlignment="Left" Margin="180,98,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="121" Click="cmdAnnuler_Click" />
+        <Label Content="code article" Height="28" HorizontalAlignment="Left" Margin="362,114,0,0" Name="lblFilterCodeArticle" VerticalAlignment="Top" Width="90" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="450,114,0,0" Name="txtFilterCodeArticle" VerticalAlignment="Top" Width="120" KeyUp="txtFilterCodeArticle_KeyUp" />
+        <Label Content="Date Opération" Height="28" HorizontalAlignment="Left" Margin="615,114,0,0" Name="lblFilterDateAchat" VerticalAlignment="Top" Width="92" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="713,115,0,0" Name="datePickerFilterDateAchat" VerticalAlignment="Top" Width="137" KeyUp="datePickerFilterDateAchat_KeyUp" SelectedDateChanged="datePickerFilterDateAchat_SelectedDateChanged" />
+    </Grid>
+</Window>

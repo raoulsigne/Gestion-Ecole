@@ -1,0 +1,20 @@
+﻿School Brain
+
+
+winexe
+C#
+.cs
+E:\Projet\Projet Ecole\Versions\Version CCTM 11-08-16\obj\x86\Debug\
+Ecole
+none
+false
+DEBUG;TRACE
+E:\Projet\Projet Ecole\Versions\Version CCTM 11-08-16\App.xaml
+127-881100900
+
+36932407546
+24-1345882158
+MainWindow.xaml;SplashScreen.xaml;UI\AffecterMatiereUI.xaml;UI\AnnulationVenteUI.xaml;UI\AssistanceCreationClasseUI.xaml;UI\BilanFinancierUI.xaml;UI\BilanSequentielUI.xaml;UI\BulletinAnnuelUI.xaml;UI\BulletinSequentielUI.xaml;UI\BulletinTrimestrielUI.xaml;UI\CertificatScolariteUI.xaml;UI\ConfigurerServeurNotificationUI.xaml;UI\ConnexionUI.xaml;UI\ConvocationParentUC.xaml;UI\ConvocationProfUC.xaml;UI\StatComparatifMatiereClasseUI.xaml;UI\DemarrageUI.xaml;UI\DepartementUI.xaml;UI\DisciplineUI.xaml;UI\EleveDuneClasseUI.xaml;UI\EleveUI.xaml;UI\EnvoyerResultatUC.xaml;UI\Etape1CreationClasse.xaml;UI\Etape2CreationClasse.xaml;UI\Etape3CreationClasse.xaml;UI\Etape4CreationClasse.xaml;UI\Etape5CreationClasse.xaml;UI\EtatOperationUI.xaml;UI\EtatPrestationUI.xaml;UI\EtatUI.xaml;UI\EtatVenteArticleUI.xaml;UI\Etat_Operation_PrestationUI.xaml;UI\FicheDeDisciplineUI.xaml;UI\FicheDePresenceUI.xaml;UI\FicheDeReleveDeNotesUI.xaml;UI\GestionDesNotificationsUI.xaml;UI\GroupeUtilisateursUI.xaml;UI\HistoriqueCaisseUI.xaml;UI\InsolvablesUI.xaml;UI\JournalUI.xaml;UI\JuryUI.xaml;UI\ModifierPasswordUI.xaml;UI\MontantTrancheUI.xaml;UI\MoyennesAnnuellesUI.xaml;UI\MoyenneSequentielleUI.xaml;UI\MoyenneTrimestrielleUI.xaml;UI\NouveauSetArticleUI.xaml;UI\Ops_caisseUI.xaml;UI\Payer_ArticleUI.xaml;UI\Payer_PrestationUI.xaml;UI\PaysUI.xaml;UI\ProfilScolaireUI.xaml;UI\ProgrammeClasseUI.xaml;UI\ProgressDialog.xaml;UI\RapportNotificationUC.xaml;UI\RecalculerResultatDunEleveUI.xaml;UI\RecapitulatifAnnuelUI.xaml;UI\RecapitulatifSequentielUI.xaml;UI\RecapitulatifTrimestrielUI.xaml;UI\RechercherEleveUI.xaml;UI\RegionUI.xaml;UI\ResultatAnnuelUI.xaml;UI\ResultatSequentielUI.xaml;UI\ResultatTrimestrielUI.xaml;UI\ReunionEleveUC.xaml;UI\ReunionUC.xaml;UI\RoleUI.xaml;UI\SaisieAnonymatUI.xaml;UI\SaisieNotesAvecAnonymatsUI.xaml;UI\SaisieNotesSansAnonymatsUI.xaml;UI\SaisirSanctionEleveUI.xaml;UI\SaisirSanctionsClasseUI.xaml;UI\SituationFinanciereUI.xaml;UI\SortieArticleUI.xaml;UI\StatComparaisonResultatNiveauUI.xaml;UI\StatComparatifResultatClasseUI.xaml;UI\StatProgressionClasseUI.xaml;UI\StatutFinancierUI.xaml;UI\StatVariationNiveauParMatiereUI.xaml;UI\teamUI.xaml;UI\UtilisateursUI.xaml;UI\WindowAddEditArticleUI.xaml;UI\WindowAddEditCategorieArticleUI.xaml;UI\WindowAddEditCategorieEleveUI.xaml;UI\WindowAddEditClasseUI.xaml;UI\WindowAddEditCycleUI.xaml;UI\WindowGenererStatistiqueDuneClasseUI.xaml;UI\WindowGenererStatistiqueDunNiveauUI.xaml;UI\WindowListeEleveParClasseUI.xaml;UI\WindowAddEditEnseignantUI.xaml;UI\WindowAddEditGroupeMatiereUI.xaml;UI\WindowAddEditMagasinUI.xaml;UI\WindowAddEditMatiereUI.xaml;UI\WindowAddEditNiveauUI.xaml;UI\WindowAddEditParametresUI.xaml;UI\WindowAddEditPrestationUI.xaml;UI\WindowAddEditSequenceUI.xaml;UI\WindowAddEDitSerieUI.xaml;UI\WindowAddEditTrimestreUI.xaml;UI\WindowAddEditTypeClasseUI.xaml;UI\WindowAddEditTypeEvaluationUI.xaml;UI\WindowAddSetArticleUI.xaml;UI\WindowApprovisionnementArticleUI.xaml;UI\WindowCreerModifierTrancheUI.xaml;UI\WindowDefinirEvaluationMatiereUI.xaml;UI\WindowDefinirMentionUI.xaml;UI\WindowEditInfosDemarrageUI.xaml;UI\WindowEditSetArticleUI.xaml;UI\WindowEtatDesSanctionDuneClasseUI.xaml;UI\WindowGenererBulletinsAnnuelUI.xaml;UI\WindowGenererBulletinsSequentielUI.xaml;UI\WindowGenererBulletinsTrimestrielUI.xaml;UI\WindowGenererCertificatScolariteDuneClasseUI.xaml;UI\WindowGenererCertificatScolariteUI.xaml;UI\WindowGenererResultatDunEleveUI.xaml;UI\WindowGenererResultatsAnnuelsUI.xaml;UI\WindowGenererResultatsSequentielsUI.xaml;UI\WindowGenererResultatsTrimestrielsUI.xaml;UI\WindowGetEtatStockArticleUI.xaml;UI\WindowGetNbreEleveParClasseUI.xaml;UI\WindowInscriptionEleve2UI.xaml;UI\WindowInscriptionEleveUI.xaml;UI\WindowListeDesElevesDuneClasseUI.xaml;UI\WindowProfilAcademiqueUI.xaml;UI\WindowSaisieDesAppreciationsDesMoyennesUI.xaml;UI\WindowSaisieDesAppreciationsDesResultatsUI.xaml;UI\WindowTitularisationEnseignantUI.xaml;
+
+False
+

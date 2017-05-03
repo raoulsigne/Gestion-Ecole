@@ -1,0 +1,20 @@
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\bin\Debug\Projet Ecole.exe.config
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\MainWindow.baml
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\EtatUI.baml
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\Ops_caisseUI.baml
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\Payer_ArticleUI.baml
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\Payer_PrestationUI.baml
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\MainWindow.g.cs
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\EtatUI.g.cs
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\Ops_caisseUI.g.cs
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\Payer_ArticleUI.g.cs
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\UI\Payer_PrestationUI.g.cs
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\App.g.cs
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\Projet Ecole_MarkupCompile.cache
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\Projet Ecole.g.resources
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\Projet_Ecole.Properties.Resources.resources
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\Projet Ecole.csproj.GenerateResource.Cache
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\bin\Debug\Projet Ecole.exe
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\bin\Debug\Projet Ecole.pdb
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\Projet Ecole.exe
+C:\Users\signe\documents\visual studio 2010\Projects\Projet Ecole\Projet Ecole\obj\x86\Debug\Projet Ecole.pdb

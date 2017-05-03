@@ -1,0 +1,85 @@
+﻿<Window x:Class="Ecole.UI.Etat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Brain : Etat de la caisse" Height="744" Width="767" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBox x:Name="PART_TextBox"
+                         Text="{Binding Path=SelectedDate, StringFormat='dd-MM-yyyy', 
+                         RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="731" Height="693">
+        <Rectangle Height="693" HorizontalAlignment="Left" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="731" Fill="#FF86B5E8" />
+        <Label Content="Type" Height="28" HorizontalAlignment="Left" Margin="386,24,0,0" Name="lblOperation" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="427,26,0,0" Name="cmbOperation" VerticalAlignment="Top" Width="110" SelectionChanged="cmbType_SelectionChanged" />
+        <Label Content="Date debut" Height="28" HorizontalAlignment="Left" Margin="19,26,0,0" Name="lblDateDebut" VerticalAlignment="Top" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="94,27,0,0" Name="dpiDateDebut" VerticalAlignment="Top" Width="115" SelectedDateChanged="dpiDateDebut_SelectedDateChanged" />
+        <Label Content="Date fin" Height="28" HorizontalAlignment="Left" Margin="215,26,0,0" Name="lblDateFin" VerticalAlignment="Top" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="265,27,0,0" Name="dpiDateFin" VerticalAlignment="Top" Width="115" SelectedDateChanged="dpiDateFin_SelectedDateChanged" />
+        <DataGrid AutoGenerateColumns="False" Height="398" VirtualizingStackPanel.IsVirtualizing="False" HorizontalAlignment="Left" Margin="27,70,0,0" CanUserAddRows="false"
+                  Name="grdEtatCaisse" VerticalAlignment="Top" Width="681" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" 
+                  CanUserResizeColumns="False" CanUserSortColumns="False" CanUserReorderColumns="False" ItemsSource="{Binding}" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding type}" Header="Type"
+                      IsReadOnly="True" x:Name="grdCodeOP" Width="75">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding motif, Mode=TwoWay}"
+                      Header="Motif" x:Name="grdMotif" IsReadOnly="True" Width="200">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Smontant, Mode=TwoWay}"
+                      Header="Montant" x:Name="grdMontant" IsReadOnly="True" Width="100">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding date, Mode=TwoWay}"
+                      Header="Date" x:Name="grdDate" IsReadOnly="True" Width="100">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding concerne, Mode=TwoWay}"
+                      Header="Concerne" x:Name="grdConcerne" IsReadOnly="True"  Width="180">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <Grid Height="145" HorizontalAlignment="Left" Margin="10,490,0,0" Name="grid1" VerticalAlignment="Top" Width="697" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="Entrées sur la periode" HorizontalAlignment="Left" Margin="46,-4,0,0" Name="lblEntrees" Width="133" />
+            <Label Content="Sorties sur la periode" Height="28" HorizontalAlignment="Left" Name="lblSorties" VerticalAlignment="Top" Width="127" Margin="51,1,0,0" Grid.Column="1" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="46,1,0,0" Name="txtEntreePeriode" VerticalAlignment="Top" Width="145" FontWeight="Bold" Grid.Row="1" />
+            <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="38,1,0,0" Name="txtSortiePeriode" VerticalAlignment="Top" Width="155" FontWeight="Bold" Grid.Row="1" />
+            <Label Content="Solde sur la periode" Height="28" HorizontalAlignment="Left" Name="lblSolde" VerticalAlignment="Top" Width="155" Grid.Column="2" Margin="44,1,0,0" />
+            <Label Content="Ancien Solde" Grid.Column="1" Height="28" HorizontalAlignment="Left" Margin="38,1,0,0" Name="lblAncienSolde" VerticalAlignment="Top" Width="145" Grid.Row="4" />
+            <TextBox Grid.Column="2" Grid.Row="1" Height="23" HorizontalAlignment="Left" Name="txtSoldePeriode" VerticalAlignment="Top" Width="145" FontWeight="Bold" Margin="44,0,0,0" />
+            <TextBox Grid.Column="1" Grid.Row="5" Height="23" HorizontalAlignment="Left" Margin="38,1,0,0" Name="txtAncienSolde" VerticalAlignment="Top" Width="155" FontWeight="Bold" />
+            <Label Content="Solde" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="0,23,0,0" Name="label1" VerticalAlignment="Top" Width="155" />
+            <TextBox Grid.Row="5" Height="23" HorizontalAlignment="Left" Margin="46,0,0,0" Name="txtSoldeTotal" VerticalAlignment="Top" Width="145" FontWeight="Bold" />
+            <Label Content="Total des sorties" Grid.Row="2" Height="28" HorizontalAlignment="Left" Margin="72,0,0,0" Name="label2" VerticalAlignment="Top" Grid.Column="1" />
+            <Label Content="Total des entrées" Grid.Row="2" Height="28" HorizontalAlignment="Left" Margin="72,2,0,0" Name="label3" VerticalAlignment="Top" />
+            <Label Content="Solde Total" Grid.Row="4" Height="28" HorizontalAlignment="Left" Margin="86,0,0,0" Name="label4" VerticalAlignment="Top" />
+            <Label Content="Solde" Grid.Column="2" Grid.Row="2" Height="28" HorizontalAlignment="Left" Margin="88,1,0,0" Name="label5" VerticalAlignment="Top" />
+            <TextBox Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="46,0,0,0" Name="txtTotalEntree" VerticalAlignment="Top" Width="145" />
+            <TextBox Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="37,1,0,0" Name="txtTotalSortie" VerticalAlignment="Top" Width="156" />
+            <TextBox Grid.Column="2" Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="45,2,0,0" Name="txtTotalSolde" VerticalAlignment="Top" Width="144" />
+        </Grid>
+        <Label Content="Motif" Height="28" HorizontalAlignment="Left" Margin="543,24,0,0" Name="lblMotif" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="588,26,0,0" Name="txtMotif" VerticalAlignment="Top" Width="120" KeyUp="txtMotif_KeyUp" />
+        <Button Content="Imprimer" Height="23" HorizontalAlignment="Left" Name="cmdImprimer" VerticalAlignment="Top" Width="155" Click="imprimer_Click" Margin="27,662,0,0" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Left" Name="cmdQuitter" VerticalAlignment="Top" Width="155" Click="fermer_Click" Margin="553,662,0,0" />
+    </Grid>
+</Window>

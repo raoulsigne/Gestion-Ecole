@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Ecole.UI.Etape2CreationClasse"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="357" d:DesignWidth="525">
+    <Grid Background="#FFC8DDE2" Width="520">
+        <Label Background="#FF86B5E8" Content="Seconde étape" Height="50" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" Width="520" FontFamily="Algerian" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Background="#FF86B5E8" Content="Choix ou définition du niveau" Height="28" HorizontalAlignment="Left" Margin="0,47,0,0" Name="label2" VerticalAlignment="Top" Width="520" FontFamily="Times New Roman" FontSize="18" />
+        <GroupBox Header="Remplir le formulaire" Height="189" HorizontalAlignment="Left" Margin="0,97,0,0" Name="groupBox1" VerticalAlignment="Top" Width="520">
+            <Grid Background="#FF86B5E8" Height="135" Width="433">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="136*" />
+                    <ColumnDefinition Width="297*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBox Height="25" HorizontalAlignment="Left" Margin="12,4,0,0" Name="txtCode" VerticalAlignment="Top" Width="184" Grid.Column="1" Grid.Row="1" LostFocus="txtCode_LostFocus" />
+                <TextBox Height="22" HorizontalAlignment="Left" Name="txtNom" VerticalAlignment="Top" Width="184" Grid.Column="1" Grid.Row="2" Margin="12,0,0,0" LostFocus="txtNom_LostFocus" />
+                <Label Content="Code du niveau" Height="28" HorizontalAlignment="Left" Margin="12,0,0,0" Name="lblCode" VerticalAlignment="Top" Width="97" Grid.Row="1" />
+                <Label Content="Nom du niveau" Height="28" HorizontalAlignment="Left" Name="lblNom" VerticalAlignment="Top" Width="95" Grid.Row="2" Margin="12,1,0,0" />
+                <Label Content="Niveau" Height="28" HorizontalAlignment="Left" Margin="14,1,0,0" Name="lblNiveau" VerticalAlignment="Top" Grid.Row="3" Width="95" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="12,32,0,0" Name="txtNiveau" VerticalAlignment="Top" Width="184" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" PreviewTextInput="txtNiveau_PreviewTextInput" LostFocus="txtNiveau_LostFocus" />
+                <Label Content="Choisir" Height="28" HorizontalAlignment="Left" Margin="12,0,0,0" Name="lblChoisir" VerticalAlignment="Top" />
+                <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="12,5,0,0" Name="cmbChoisir" VerticalAlignment="Top" Width="184" DropDownClosed="cmbChoisir_DropDownClosed" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

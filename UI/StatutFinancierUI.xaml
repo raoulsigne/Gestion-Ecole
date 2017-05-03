@@ -1,0 +1,79 @@
+﻿<Window x:Class="Ecole.UI.StatutFinancierUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Brain : Statut Financier" Height="707" Width="855" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <StackPanel Name="stackPanel1" Margin="0" Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="801" Height="651">
+        <Grid Height="129" Name="grid1" Width="767" Margin="0,10,0,0" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="26*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="144*" />
+                <ColumnDefinition Width="200*" />
+                <ColumnDefinition Width="423*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Matricule" Grid.RowSpan="2" Height="28" HorizontalAlignment="Left" Margin="0,2,0,0" Name="lblMatricule" VerticalAlignment="Top" Width="96" />
+            <TextBox Grid.Column="1" Height="24" HorizontalAlignment="Left" Margin="0,6,0,0" Name="txtMatricule" VerticalAlignment="Top" Width="190" KeyUp="txtMatricule_KeyUp" />
+            <Label Content="Année" Grid.Row="2" Height="26" HorizontalAlignment="Left" Name="lblAnnee" VerticalAlignment="Top" Width="96" />
+            <Button Content="Initialiser" Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="68,1,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="120" Click="cmdAnnuler_Click" />
+            <Button Content="Valider" Height="23" HorizontalAlignment="Left" Margin="-3,0,0,0" Name="cmdValider" VerticalAlignment="Top" Width="119" Click="cmdValider_new_Click" Grid.Row="3" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="71,0,0,0" Name="txtAnnee" VerticalAlignment="Top" Width="119" Grid.Column="1" Grid.Row="2" TextChanged="txtAnnee_TextChanged" IsEnabled="False"/>
+            <TextBox Height="23" HorizontalAlignment="Left" Name="txtAnneeScolaire" VerticalAlignment="Top" Width="65" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Right" TextChanged="txtAnneeScolaire_TextChanged" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" />
+            <Label Content="Classe" Height="28" HorizontalAlignment="Left" Margin="-1,5,0,0" Name="lblClasse" VerticalAlignment="Top" Grid.Row="1" Width="97" />
+            <ComboBox Height="23" HorizontalAlignment="Left" Margin="1,6,0,0" Name="cmbClasse" VerticalAlignment="Top" Width="190" Grid.Column="1" Grid.Row="1" DropDownClosed="cmbClasse_DropDownClosed"/>
+            <ComboBox Grid.Column="2" Height="23" HorizontalAlignment="Left" Margin="7,7,0,0" Name="cmbEleve" VerticalAlignment="Top" Width="403" Grid.Row="1" DropDownClosed="cmbEleve_DropDownClosed"/>
+        </Grid>
+        <Label Content="Statut Financier" Height="40" Name="lblStatus" Margin="0,30,0,0" Width="769" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="18" Background="#FF86B5E8" />
+        <DataGrid AutoGenerateColumns="False" Height="317" Name="grdStatus" Width="769" Margin="0" CanUserAddRows="False" 
+                  IsReadOnly="True" VirtualizingStackPanel.IsVirtualizing="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding prestation}" Header="Prestation"
+                      IsReadOnly="True" x:Name="grdPrestation" Width="100">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding tranche}" Header="Tranche"
+                      IsReadOnly="True" x:Name="grdTranche" Width="80">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Smontant}" Header="Montant versé"
+                      IsReadOnly="True" x:Name="grdMontant" Width="120">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding observation}" Header="Observation"
+                      IsReadOnly="True" x:Name="grdObservation" Width="120">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding reste}" Header="Reste à payer"
+                      IsReadOnly="True" x:Name="grdReste" Width="100">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding remise}" Header="Remise"
+                      IsReadOnly="True" x:Name="grdRemise" Width="100">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding dateop}" Header="Date de l'opération"
+                      IsReadOnly="True" x:Name="grdDateOP" Width="120">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Height="105" Name="grid2" Width="802" Margin="0,20,0,0" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="41*" />
+                <RowDefinition Height="44*" />
+                <RowDefinition Height="35*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="149*" />
+                <ColumnDefinition Width="212*" />
+                <ColumnDefinition Width="441*" />
+            </Grid.ColumnDefinitions>
+            <Button Content="Imprimer l'état financier" Height="27" HorizontalAlignment="Left" Margin="10,2,0,0" Name="cmbImprimer" VerticalAlignment="Top" Width="161" Click="cmbImprimer_Click" Grid.Row="2" Grid.ColumnSpan="2" />
+            <Button Content="Quitter" Grid.Column="2" Height="27" HorizontalAlignment="Left" Margin="241,2,0,0" Name="cmbQuitter" VerticalAlignment="Top" Width="124" Click="cmdQuitter_Click" Grid.Row="2" />
+            <Label Content="Total à payer" Height="28" HorizontalAlignment="Left" Margin="10,0,0,0" Name="lblTotal" VerticalAlignment="Top" Width="123" Grid.RowSpan="2" FontSize="15" />
+            <TextBox Height="31" HorizontalAlignment="Left" Name="txtTotal" VerticalAlignment="Top" Width="198" Grid.Column="1" Margin="0,1,0,0" Foreground="#FF05055E" FontWeight="Bold" FontSize="20" />
+            <Label Content="Total versé" Grid.Column="2" Grid.RowSpan="2" Height="28" HorizontalAlignment="Left" Margin="23,4,0,0" Name="label1" VerticalAlignment="Top" FontSize="15" />
+            <TextBox Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="167,1,0,0" Name="txtTotalVerse" VerticalAlignment="Top" Width="198" Foreground="#FF065D06" FontSize="20" FontWeight="Bold" />
+            <Label Content="Reste à payer" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="10,7,0,0" Name="lblResteAPayer" VerticalAlignment="Top" FontSize="15" />
+            <TextBox Grid.Row="1" Height="35" HorizontalAlignment="Left" Name="txtResteAPayer" VerticalAlignment="Top" Width="198" Grid.Column="1" FontWeight="Bold" FontSize="20" Foreground="#FFA50B0B" />
+            <Label Content="Total remise" FontSize="15" Height="28" HorizontalAlignment="Left" Margin="23,3,0,0" Name="lblRemise" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" />
+            <TextBox IsEnabled="False" FontSize="20" FontWeight="Bold" Foreground="#FF065D06" Grid.Column="2" Height="31" HorizontalAlignment="Left" Margin="167,0,0,0" Name="txtRemise" VerticalAlignment="Top" Width="198" Grid.Row="1" />
+        </Grid>
+    </StackPanel>
+</Window>

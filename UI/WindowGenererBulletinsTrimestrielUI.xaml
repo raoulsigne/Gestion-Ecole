@@ -1,0 +1,45 @@
+﻿<Window x:Class="Ecole.UI.WindowGenererBulletinsTrimestrielUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Génération des Bulletins Trimestriels" Height="376" Width="445" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+        <StackPanel Background="#FFC8DDE2" Orientation="Vertical" Width="420" Height="336">
+            <GroupBox Header="Informations obligatoires" Height="223" Name="groupBox1" Width="337" Margin="15,5">
+                <Grid Height="152" Name="grid1" Width="283" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="108*" />
+                        <ColumnDefinition Width="175*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Classe (*)" Height="28" HorizontalAlignment="Left" Name="lblClasse" VerticalAlignment="Top" Width="97" Margin="0,10,0,0" />
+                    <Label Content="Année (*)" HorizontalAlignment="Left" Name="lblAnnee" Width="95" Margin="2,9,0,0" Grid.Row="1" />
+                    <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="24,10,0,0" Name="cmbClasse" VerticalAlignment="Top" Width="146" />
+                    <Label Content="Trimestre (*)" Grid.Row="2" Height="28" HorizontalAlignment="Left" Margin="2,0,0,0" Name="lblTrimestre" VerticalAlignment="Top" />
+                    <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="24,5,0,0" Name="cmbTrimestre" VerticalAlignment="Top" Width="146" Grid.Row="2" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="23,9,0,0" Name="txtAnneeScolaire" VerticalAlignment="Top" Width="54" Grid.Row="1" TextChanged="txtAnneeScolaire_TextChanged" Grid.Column="1" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" />
+                <Label Content="/" Grid.Column="1" Grid.Row="1" Height="26" HorizontalAlignment="Left" Margin="84,9,0,0" Name="label1" VerticalAlignment="Top" Width="20" />
+                <TextBox IsEnabled="False" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="105,9,0,0" Name="txtAnnee" VerticalAlignment="Top" Width="64" PreviewTextInput="txtAnnee_PreviewTextInput" Grid.Row="1" />
+                <Button Content="Valider" Height="22" HorizontalAlignment="Left" Margin="2,10,0,0" Name="cmdValider" VerticalAlignment="Top" Width="106" Click="cmdValider_Click" Grid.Row="3" />
+                <Button Content="Annuler" Height="22" HorizontalAlignment="Left" Margin="60,10,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="106" Click="cmdAnnuler_Click" Grid.Row="3" Grid.Column="1" />
+            </Grid>
+            </GroupBox>
+        <ProgressBar Height="22" Name="ProgressBar1" Width="334" />
+        <Grid Height="40" Name="grid" Background="#FF86B5E8" Margin="0,40" Width="417">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Fermer" Height="20" HorizontalAlignment="Left" Margin="138,14,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="152" Click="cmdFermer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

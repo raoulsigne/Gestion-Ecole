@@ -1,0 +1,91 @@
+﻿<Window x:Class="Ecole.UI.WindowListeEleveParClasseUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Creer / Editer les Effectifs des classes" Height="621" Width="884" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <Window.Resources>
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBox x:Name="PART_TextBox"
+                         Text="{Binding Path=SelectedDate, StringFormat='dd-MM-yyyy', 
+                         RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="572" Width="868">
+        <StackPanel Orientation="Horizontal" Margin="-2,3,0,414">
+            <GroupBox Header="Informations obligatoires" Height="121" Name="groupBox1" Width="380" Margin="15,15">
+                <Grid Height="68" Name="grid1" Width="342" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="124*" />
+                        <ColumnDefinition Width="218*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Classe (*)" Height="28" HorizontalAlignment="Left" Margin="0,1,0,0" Name="lblClasse" VerticalAlignment="Top" Width="94" />
+                    <Label Content="Année (*)" Height="28" HorizontalAlignment="Left" Margin="0,6,0,0" Name="lblAnnee" VerticalAlignment="Top" Grid.Row="1" Width="94" />
+                    <ComboBox Height="25" HorizontalAlignment="Right" Margin="0,4,21,0" Name="cmbClasse" VerticalAlignment="Top" Width="197" SelectionChanged="combBoxClasse_SelectionChanged" Grid.Column="1" />
+                    <TextBox Height="23" Margin="0,4,165,0" Name="txtAnneeScolaire" VerticalAlignment="Top" TextChanged="txtAnneeScolaire_TextChanged" Grid.Column="1" Grid.Row="1" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" />
+                    <Label Content="/" Height="23" HorizontalAlignment="Right" Margin="0,4,142,0" Name="label7" VerticalAlignment="Top" Width="17" Grid.Column="1" Grid.Row="1" />
+                    <TextBox IsEnabled="False" Height="22" Margin="82,6,76,0" Name="txtAnnee" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" PreviewTextInput="txtAnnee_PreviewTextInput" />
+                </Grid>
+            </GroupBox>
+            <Grid Height="106" Name="grid2" Width="118" Margin="10" Background="#FF86B5E8">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="36*" />
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="74*" />
+                </Grid.ColumnDefinitions>
+                <Button Content="Valider" Height="31" HorizontalAlignment="Left" Margin="6,14,0,0" Name="cmdValider" VerticalAlignment="Top" Width="106" Click="cmdValider_Click" Grid.ColumnSpan="3" />
+                <Button Content="Annuler" Name="cmdAnnuler" Width="106" Click="cmdAnnuler_Click" Grid.ColumnSpan="3" Margin="6,11,6,14" Grid.Row="1" />
+            </Grid>
+        </StackPanel>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Height="330" HorizontalAlignment="Left" Margin="12,172,0,0" Name="grdListeEffectif" VerticalAlignment="Top" Width="844" ItemsSource="{Binding ListeEleves}" KeyUp="grdListeEffectif_KeyUp" VirtualizingStackPanel.IsVirtualizing="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding numero}" Header="No" Width="70" />
+                <DataGridTextColumn Binding="{Binding nom}" Header="Nom" Width="200" />
+                <DataGridTextColumn Binding="{Binding matricule}" Header="Matricule" Width="100" />
+                <DataGridTextColumn Binding="{Binding categorie}" Header="Catégorie" Width="70" />
+                <DataGridTextColumn Binding="{Binding sexe}" Header="Sexe" Width="80" />
+                <DataGridTextColumn Binding="{Binding etat}" Header="Etat" Width="80" />
+                <DataGridTextColumn Binding="{Binding dateNaissanceString}" Header="date De Naissance" Width="100" />
+                <DataGridTextColumn Binding="{Binding telephone}" Header="Téléphone" Width="100" />
+                <DataGridTextColumn Binding="{Binding nompere}" Header="Nom du père" Width="100" />
+                <DataGridTextColumn Binding="{Binding telParent}" Header="Téléphone du père" Width="100" />
+                <DataGridTextColumn Binding="{Binding email}" Header="Email" Width="150" />
+                <DataGridTextColumn Binding="{Binding adresse}" Header="Adresse" Width="100" />
+            </DataGrid.Columns>        
+        </DataGrid>
+        <Grid Height="40" Name="grid" Margin="0,532,0,0" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="182*" />
+                <ColumnDefinition Width="88*" />
+                <ColumnDefinition Width="95*" />
+                <ColumnDefinition Width="175*" />
+            </Grid.ColumnDefinitions>
+            <Button Content="Fermer" Height="28" HorizontalAlignment="Left" Margin="70,6,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="152" Click="cmdFermer_Click" Grid.Column="3" />
+            <Button Content="Imprimer" Height="28" HorizontalAlignment="Left" Margin="12,6,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="142" Click="cmdImprimer_Click" />
+            <Button Content="Exporter sur Excel" Height="28" HorizontalAlignment="Left" Margin="48,6,0,0" Name="btnExport" VerticalAlignment="Top" Width="130" Grid.Column="1" Grid.ColumnSpan="2" Click="btnExport_Click" />
+        </Grid>
+        <Label Content="Total : " FontSize="15" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="10,500,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="0" FontSize="15" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="73,501,0,0" Name="lblTotal" VerticalAlignment="Top" />
+    </Grid>
+</Window>

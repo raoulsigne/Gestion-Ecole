@@ -1,0 +1,44 @@
+﻿<Window x:Class="Ecole.UI.WindowEditInfosDemarrageUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Edition des Paramètres de démarrage de l'application" Height="500" Width="601" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <Grid Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="598">
+        <StackPanel Orientation="Horizontal" Margin="-2,75,13,177">
+            <GroupBox Header="Configuration" Height="270" Name="groupBox1" Width="546" Margin="15,15">
+                <Grid Height="187" Name="grid1" Width="514" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="124*" />
+                        <ColumnDefinition Width="218*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="33,6,0,0" Name="txtNomSociete" VerticalAlignment="Top" Width="184" Grid.Column="1" />
+                    <TextBox Height="27" HorizontalAlignment="Left" Name="txtAdresseServeur" VerticalAlignment="Top" Width="184" Grid.Column="1" Margin="33,50,0,0" />
+                    <Label Content="Utilisateur (*)" Height="28" HorizontalAlignment="Left" Name="lblUtilisateur" VerticalAlignment="Top" Width="136" Grid.Row="1" Margin="6,4,0,0" />
+                    <TextBox Height="28" HorizontalAlignment="Left" Margin="33,0,0,0" Name="txtUtilisateurBD" VerticalAlignment="Top" Width="186" Grid.Column="1" Grid.Row="1" />
+                    <Label Content="Nom de la Société (*)" Height="28" HorizontalAlignment="Left" Margin="0,6,0,0" Name="lblNomSociete" VerticalAlignment="Top" Width="134" />
+                    <Label Content="Nom / Adresse du Serveur de la BD (*)" Height="28" HorizontalAlignment="Left" Name="lblNomServeur" VerticalAlignment="Top" Width="212" Grid.ColumnSpan="2" Margin="0,53,0,0" />
+                    <Label Content="Mot de passe de la BD (*)" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="6,46,0,0" Name="lblPasswordBD" VerticalAlignment="Top" Width="159" />
+                    <PasswordBox Grid.Column="1" Grid.Row="1" Height="26" HorizontalAlignment="Left" Margin="32,48,0,0" Name="passwdBD" VerticalAlignment="Top" Width="185" />
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+        <Grid Background="#FF86B5E8" Margin="21,448,12,104" Name="grid2" Width="546">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="125*" />
+                <ColumnDefinition Width="28*" />
+                <ColumnDefinition Width="49*" />
+                <ColumnDefinition Width="207*" />
+            </Grid.ColumnDefinitions>
+            <Button Click="cmdValider_Click" Content="Valider" Height="34" HorizontalAlignment="Left" Margin="84,6,0,0" Name="cmdValider" VerticalAlignment="Top" Width="123" Grid.ColumnSpan="3" />
+            <Button Click="cmdAnnuler_Click" Content="Annuler" Height="34" Margin="57,6,80,0" Name="cmdAnnuler" VerticalAlignment="Top" Grid.Column="3" />
+        </Grid>
+
+    </Grid>
+</Window>

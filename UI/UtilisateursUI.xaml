@@ -1,0 +1,74 @@
+﻿<Window x:Class="Ecole.UI.UtilisateursUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Brain : Gestion des utilisateurs" Height="561" Width="559" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <StackPanel Height="524" Name="stackPanel1" Width="526" Background="#FFC8DDE2">
+        <StackPanel Orientation="Horizontal" Height="230">
+            <GroupBox Header="Informations requises" Height="198" Name="groupBox1" Width="380" HorizontalAlignment="Left" Margin="15,15">
+                <Grid Height="144" Name="grid1" Width="342" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="134*" />
+                        <ColumnDefinition Width="231*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Login" Height="28" HorizontalAlignment="Left" Margin="7,8,0,0" Name="lblLogin" VerticalAlignment="Top" Width="114" />
+                    <Label Content="Nom" Height="29" HorizontalAlignment="Left" Margin="7,0,0,0" Name="lblNom" VerticalAlignment="Bottom" Width="114" Grid.Row="1" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="1,6,0,0" Name="txtLogin" VerticalAlignment="Top" Width="179" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Name="txtNom" VerticalAlignment="Top" Width="179" Margin="2,4,0,0" Grid.Row="1" />
+                    <Label Content="Groupe" Grid.Row="2" Height="28" HorizontalAlignment="Left" Margin="6,0,0,0" Name="lblGroupe" VerticalAlignment="Top" Width="115" />
+                    <Label Content="Mot de passe" Grid.Row="3" Height="28" HorizontalAlignment="Left" Margin="7,0,0,0" Name="lblMotDePasse" VerticalAlignment="Top" Width="161" Grid.ColumnSpan="2" />
+                    <Label Content="Confirmer mot de passe" Grid.Row="4" Height="28" HorizontalAlignment="Left" Margin="6,0,0,0" Name="lbllblConfirmerMotDePasse" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="141" />
+                    <PasswordBox Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="61,2,0,0" Name="pwdMotDePasse" VerticalAlignment="Top" Width="120" />
+                    <PasswordBox Grid.Column="1" Grid.Row="4" Height="23" HorizontalAlignment="Left" Margin="62,0,0,0" Name="pwdConfirmerMotDePasse" VerticalAlignment="Top" Width="120" />
+                    <ComboBox Grid.Column="1" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="2,6,0,0" Name="cmbGroupe" VerticalAlignment="Top" Width="178" Grid.RowSpan="2" />
+                </Grid>
+            </GroupBox>
+            <Grid Height="135" Name="grid2" Width="85" Margin="10,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45*" />
+                    <RowDefinition Height="14*" />
+                    <RowDefinition Height="76*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Content="Enregistrer" Height="23" HorizontalAlignment="Left" Margin="4,4,0,0" Name="cmdEnregistrer" VerticalAlignment="Top" Width="75" Click="cmdEnregistrer_Click" />
+                <Button Content="Annuler" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="4,0,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="75" Click="cmdAnnuler_Click" />
+            </Grid>
+        </StackPanel>
+        <GroupBox Header="Liste des utilisateurs">
+            <DataGrid AutoGenerateColumns="False" Height="200" Name="grdListe" Width="472" Margin="10" VerticalScrollBarVisibility="Visible" VirtualizingStackPanel.IsVirtualizing="False"
+                  CanUserAddRows="False" IsReadOnly="True" ItemsSource="{Binding}" KeyUp="grdListe_KeyUp" MouseDoubleClick="grdListe_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding login}" Header="Login"
+                      IsReadOnly="True" x:Name="grdLogin" Width="130">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding nom}" Header="Noms et Prénoms"
+                      IsReadOnly="True" x:Name="grdNom" Width="200">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding role}" Header="Groupe"
+                      IsReadOnly="True" x:Name="grdGroupe" Width="300">
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <Grid Height="40" Name="grid" Width="527" Margin="0,10,0,0" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Imprimer la liste" Height="23" HorizontalAlignment="Left" Margin="9,11,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="138" Click="cmdImprimer_Click" Grid.Column="2" />
+            <Button Content="Fermer" Height="23" HorizontalAlignment="Left" Margin="27,11,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="145" Click="cmdFermer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

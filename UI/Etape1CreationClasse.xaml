@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Ecole.UI.Etape1CreationClasse"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="357" d:DesignWidth="525">
+    <Grid Background="#FFC8DDE2" Width="520">
+        <Label Background="#FF86B5E8" Content="Bienvenue dans l'assistance de création d'une classe" Height="50" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" Width="520" FontFamily="Algerian" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Background="#FF86B5E8" Content="Commençons par définir un cycle ou choisissons un qui existe déjà" Height="28" HorizontalAlignment="Left" Margin="0,47,0,0" Name="label2" VerticalAlignment="Top" Width="520" FontFamily="Times New Roman" FontSize="18" />
+        <GroupBox Header="Remplir le formulaire" Height="189" HorizontalAlignment="Left" Margin="0,97,0,0" Name="groupBox1" VerticalAlignment="Top" Width="520">
+            <Grid Background="#FF86B5E8" Height="135" Width="433">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="136*" />
+                    <ColumnDefinition Width="297*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="Choisir" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="lblChoisir" VerticalAlignment="Top" />
+                <Label Content="Code du cycle" Height="28" HorizontalAlignment="Left" Margin="6,8,0,0" Name="lblCode" VerticalAlignment="Top" Grid.Row="1" />
+                <Label Content="Nom du cyle" Height="28" HorizontalAlignment="Left" Margin="6,11,0,0" Name="lblNom" VerticalAlignment="Top" Grid.Row="2" />
+                <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="13,11,0,0" Name="cmbChoisir" VerticalAlignment="Top" Width="201" DropDownClosed="cmbChoisir_DropDownClosed" />
+                <TextBox Grid.Column="1" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="13,13,0,0" Name="txtCode" VerticalAlignment="Top" Width="201" LostFocus="txtCode_LostFocus" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="13,15,0,0" Name="txtNom" VerticalAlignment="Top" Width="201" Grid.Column="1" Grid.Row="2" LostFocus="txtNom_LostFocus" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

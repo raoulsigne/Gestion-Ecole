@@ -1,0 +1,51 @@
+﻿<Window x:Class="Ecole.UI.WindowGenererCertificatScolariteUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Génération des certificats de scolarité" Height="341" Width="633" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <StackPanel Background="#FFC8DDE2" Orientation="Vertical" Height="293">
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Informations obligatoires" Height="193" Name="groupBox1" Width="396" Margin="15,5">
+                <Grid Height="160" Name="grid1" Width="376" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="112*" />
+                        <ColumnDefinition Width="218*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Height="25" HorizontalAlignment="Left" Margin="0,8,0,0" Name="txtAnneeScolaire" VerticalAlignment="Top" Width="57" Grid.Column="1" TextChanged="txtAnneeScolaire_TextChanged" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" KeyUp="txtAnneeScolaire_KeyUp" />
+                    <Label Content="/" Grid.Column="1" Height="26" HorizontalAlignment="Left" Margin="57,8,0,0" Name="label1" VerticalAlignment="Top" Width="20" Grid.RowSpan="2" />
+                    <TextBox IsEnabled="False" Height="25" HorizontalAlignment="Left" Margin="72,7,0,0" Name="txtAnnee" VerticalAlignment="Top" Width="54" Grid.Column="1" PreviewTextInput="txtAnnee_PreviewTextInput" KeyUp="txtAnnee_KeyUp" />
+                    <TextBox Height="25" HorizontalAlignment="Left" Name="txtMatricule" VerticalAlignment="Top" Width="126" Grid.Column="1" Grid.Row="3" KeyUp="txtMatricule_KeyUp" />
+                    <Label Content="Année" Height="28" HorizontalAlignment="Left" Name="lblAnnee" VerticalAlignment="Top" Width="97" Margin="0,6,0,0" />
+                    <Label Content="Matricule" Height="28" HorizontalAlignment="Left" Name="lblMatricule" VerticalAlignment="Top" Width="95" Grid.Row="2" Margin="0,28,0,0" Grid.RowSpan="2" />
+                    <Button Content="Annuler" Height="25" HorizontalAlignment="Left" Margin="131,1,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="89" Click="cmdAnnuler_Click" Grid.Row="4" Grid.Column="1" />
+                    <Button Content="Valider" Height="25" HorizontalAlignment="Left" Margin="6,1,0,0" Name="cmdValider" VerticalAlignment="Top" Width="106" Click="cmdValider_Click" Grid.Row="4" />
+                    <Label Content="Classe" Height="28" HorizontalAlignment="Left" Name="lblClasse" VerticalAlignment="Top" Grid.Row="1" />
+                    <ComboBox Grid.Column="1" Height="26" HorizontalAlignment="Left" Name="cmbClasse" VerticalAlignment="Top" Width="126" Grid.Row="1" Margin="0,6,0,0" DropDownClosed="cmbClasse_DropDownClosed"/>
+                    <Label Content="Nom" Grid.Row="2" Height="28" HorizontalAlignment="Left" Name="label2" VerticalAlignment="Top" />
+                    <ComboBox Height="26" HorizontalAlignment="Left" Margin="0,2,0,0" Name="cmbEleve" VerticalAlignment="Top" Width="242" Grid.Column="1" Grid.Row="2" DropDownClosed="cmbEleve_DropDownClosed"/>
+                </Grid>
+            </GroupBox>
+            <Image Height="140" Name="imageEleve" Stretch="Fill" Width="164" Margin="15,15" />
+        </StackPanel>
+        <Label Content="" Height="28" Name="lblInfoEleve" Width="472" Margin="-100,0,0,0" VerticalContentAlignment="Center" FontWeight="Bold" Target="{Binding}" FontStyle="Normal" FontStretch="Normal" />
+        <Grid Height="40" Name="grid" Background="#FF86B5E8" Margin="0,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Fermer" Height="28" HorizontalAlignment="Left" Margin="224,6,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="152" Click="cmdFermer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

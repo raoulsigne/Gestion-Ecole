@@ -1,0 +1,1457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8898005E-6776-41CE-94C9-73A156671822}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ecole</RootNamespace>
+    <AssemblyName>School Brain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\Projets\school brain\publier\tous\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>fr</TargetCulture>
+    <ProductName>School Brain</ProductName>
+    <PublisherName>Brain Studio</PublisherName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\plume.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D742B3DC3A0DCE32FE6934574858ED8E0DBA4AF8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ECOLE_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\School Brain.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\School Brain.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>E:\Projet\Libraries\itextsharp librairy\itextsharp-dll-core\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Projet\Libraries\WPF Chart\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Projet\Libraries\WPF Chart\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BusinessEntity\ArticleQtBE.cs" />
+    <Compile Include="BusinessEntity\EffectifClasseBE.cs" />
+    <Compile Include="BusinessEntity\EtatStockBE.cs" />
+    <Compile Include="BusinessEntity\GroupeMatiereBE.cs" />
+    <Compile Include="BusinessEntity\GroupePrivilegeBE.cs" />
+    <Compile Include="BusinessEntity\InscrireBE.cs" />
+    <Compile Include="BusinessEntity\JournalBE.cs" />
+    <Compile Include="BusinessEntity\MagasinBE.cs" />
+    <Compile Include="BusinessEntity\MatiereBE.cs" />
+    <Compile Include="BusinessEntity\MentionBE.cs" />
+    <Compile Include="BusinessEntity\MontantTrancheBE.cs" />
+    <Compile Include="BusinessEntity\MoyennesAnnuellesBE.cs" />
+    <Compile Include="BusinessEntity\MoyennesBE.cs" />
+    <Compile Include="BusinessEntity\MoyennesTrimestrielsBE.cs" />
+    <Compile Include="BusinessEntity\NiveauBE.cs" />
+    <Compile Include="BusinessEntity\NotesBE.cs" />
+    <Compile Include="BusinessEntity\OperationBE.cs" />
+    <Compile Include="BusinessEntity\ParametresBE.cs" />
+    <Compile Include="BusinessEntity\PayerBE.cs" />
+    <Compile Include="BusinessEntity\PaysBE.cs" />
+    <Compile Include="BusinessEntity\PrestationBE.cs" />
+    <Compile Include="BusinessEntity\PrivilegeBE.cs" />
+    <Compile Include="BusinessEntity\ProgrammerBE.cs" />
+    <Compile Include="BusinessEntity\RealiserBE.cs" />
+    <Compile Include="BusinessEntity\RegionBE.cs" />
+    <Compile Include="BusinessEntity\ResultatAnnuelBE.cs" />
+    <Compile Include="BusinessEntity\ResultatBE.cs" />
+    <Compile Include="BusinessEntity\ResultatTrimestrielBE.cs" />
+    <Compile Include="BusinessEntity\SanctionnerBE.cs" />
+    <Compile Include="BusinessEntity\SequenceBE.cs" />
+    <Compile Include="BusinessEntity\SerieBE.cs" />
+    <Compile Include="BusinessEntity\SetarticleBE.cs" />
+    <Compile Include="BusinessEntity\StatistiqueClasseBE.cs" />
+    <Compile Include="BusinessEntity\StatistiqueNiveauBE.cs" />
+    <Compile Include="BusinessEntity\StockerBE.cs" />
+    <Compile Include="BusinessEntity\TrancheBE.cs" />
+    <Compile Include="BusinessEntity\TrimestreBE.cs" />
+    <Compile Include="BusinessEntity\TypeclasseBE.cs" />
+    <Compile Include="BusinessEntity\TypeevaluationBE.cs" />
+    <Compile Include="BusinessEntity\TypeoperationBE.cs" />
+    <Compile Include="BusinessEntity\UtilisateurBE.cs" />
+    <Compile Include="BusinessLogic\ApprovisionnementArticleBL.cs" />
+    <Compile Include="BusinessLogic\AssistanceCreationClasseBL.cs" />
+    <Compile Include="BusinessLogic\ConsulterEtatStockBL.cs" />
+    <Compile Include="BusinessLogic\CreerCertificatScolariteBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierArticleBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierCategorieArticleBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierCategorieEleveBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierClasseBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierCycleBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierEnseignantBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierGroupeMatiereBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierInscriptionClasseBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierMagasinBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierMatiereBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierNiveauBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierParametresBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierPrestationBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierSequenceBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierSerieBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierTrancheBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierTrimestreBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierTypeClasseBL.cs" />
+    <Compile Include="BusinessLogic\CreerModifierTypeEvaluationBL.cs" />
+    <Compile Include="BusinessLogic\CreerSetArticleBL.cs" />
+    <Compile Include="BusinessLogic\DefinirEvaluationMatiereBL.cs" />
+    <Compile Include="BusinessLogic\DefinirMentionBL.cs" />
+    <Compile Include="BusinessLogic\DemarrageBL.cs" />
+    <Compile Include="BusinessLogic\EditInfosDemarrageBL.cs" />
+    <Compile Include="BusinessLogic\GenererBulletinsAnnuelBL.cs" />
+    <Compile Include="BusinessLogic\GenererBulletinsSequentielBL.cs" />
+    <Compile Include="BusinessLogic\GenererBulletinsTrimestrielBL.cs" />
+    <Compile Include="BusinessLogic\GenererEtatDesSanctionsDuneClasseBL.cs" />
+    <Compile Include="BusinessLogic\GenererprofilAcademiqueBL.cs" />
+    <Compile Include="BusinessLogic\GenererResultatsAnnuelsBL.cs" />
+    <Compile Include="BusinessLogic\GenererResultatsDunEleveBL.cs" />
+    <Compile Include="BusinessLogic\GenererResultatsSequentielsBL.cs" />
+    <Compile Include="BusinessLogic\GenererResultatsTrimestrielsBL.cs" />
+    <Compile Include="BusinessLogic\GestionAffectationMatiereBL.cs" />
+    <Compile Include="BusinessLogic\GestionArticleBL.cs" />
+    <Compile Include="BusinessLogic\GestionBilanFinancierBL.cs" />
+    <Compile Include="BusinessLogic\GestionCaisseBL.cs" />
+    <Compile Include="BusinessLogic\GestionChangementBL.cs" />
+    <Compile Include="BusinessLogic\GestionConnexionBL.cs" />
+    <Compile Include="BusinessLogic\GestionDepartementBL.cs" />
+    <Compile Include="BusinessLogic\GestionDisciplineBL.cs" />
+    <Compile Include="BusinessLogic\GestionEleveBL.cs" />
+    <Compile Include="BusinessLogic\GestionEleveDuneClasseBL.cs" />
+    <Compile Include="BusinessLogic\GestionGroupeBL.cs" />
+    <Compile Include="BusinessLogic\GestionGroupePrivilegeBL.cs" />
+    <Compile Include="BusinessLogic\GestionGroupeUtilisateurBL.cs" />
+    <Compile Include="BusinessLogic\GestionHistoriqueCaisseBL.cs" />
+    <Compile Include="BusinessLogic\GestionJournalBL.cs" />
+    <Compile Include="BusinessLogic\GestionJuryBL.cs" />
+    <Compile Include="BusinessLogic\GestionModifierPasswordBL.cs" />
+    <Compile Include="BusinessLogic\GestionMontantTrancheBL.cs" />
+    <Compile Include="BusinessLogic\GestionMoyennesAnnuellesBL.cs" />
+    <Compile Include="BusinessLogic\GestionMoyennesSequentielleBL.cs" />
+    <Compile Include="BusinessLogic\GestionMoyennesTrimestrielleBL.cs" />
+    <Compile Include="BusinessLogic\GestionNotificationBL.cs" />
+    <Compile Include="BusinessLogic\GestionPaysBL.cs" />
+    <Compile Include="BusinessLogic\GestionPrestationBL.cs" />
+    <Compile Include="BusinessLogic\GestionPrivilegeBL.cs" />
+    <Compile Include="BusinessLogic\GestionProgrammeBL.cs" />
+    <Compile Include="BusinessLogic\GestionRecapitulatifAnnuelBL.cs" />
+    <Compile Include="BusinessLogic\GestionRecapitulatifSequentielBL.cs" />
+    <Compile Include="BusinessLogic\GestionRecapitulatifTrimestrielBL.cs" />
+    <Compile Include="BusinessLogic\GestionRegionBL.cs" />
+    <Compile Include="BusinessLogic\GestionSanctionClasseBL.cs" />
+    <Compile Include="BusinessLogic\GestionSanctionEleveBL.cs" />
+    <Compile Include="BusinessLogic\GestionStatistiqueBL.cs" />
+    <Compile Include="BusinessLogic\GestionUtilisateurBL.cs" />
+    <Compile Include="BusinessLogic\GetListeEleveParClasseBL.cs" />
+    <Compile Include="BusinessLogic\ListerEffectifClasseBL.cs" />
+    <Compile Include="BusinessLogic\SaisieAnonymatBL.cs" />
+    <Compile Include="BusinessLogic\SaisieAppreciationMoyenneBL.cs" />
+    <Compile Include="BusinessLogic\SaisieAppreciationResultatBL.cs" />
+    <Compile Include="BusinessLogic\SaisieNotesAvecAnonymatBL.cs" />
+    <Compile Include="BusinessLogic\SaisieNotesSansAnonymatBL.cs" />
+    <Compile Include="BusinessLogic\StatistiqueClasseBL.cs" />
+    <Compile Include="BusinessLogic\StatistiqueNiveauBL.cs" />
+    <Compile Include="BusinessLogic\TitularisationEnseignantBL.cs" />
+    <Compile Include="ClasseConception\BulletinAnnuel.cs" />
+    <Compile Include="ClasseConception\BulletinTrimestriel.cs" />
+    <Compile Include="ClasseConception\BullettinSequentiel.cs" />
+    <Compile Include="ClasseConception\Dictionnary.cs" />
+    <Compile Include="ClasseConception\LigneBilan.cs" />
+    <Compile Include="ClasseConception\LigneBulletinAnnuel.cs" />
+    <Compile Include="ClasseConception\LigneBulletinSequentiel.cs" />
+    <Compile Include="ClasseConception\LigneBulletinTrimestriel.cs" />
+    <Compile Include="ClasseConception\LigneChangeClasse.cs" />
+    <Compile Include="ClasseConception\LigneEleve.cs" />
+    <Compile Include="ClasseConception\LigneEtat.cs" />
+    <Compile Include="ClasseConception\LigneEtatJournal.cs" />
+    <Compile Include="ClasseConception\LigneFicheDiscipline.cs" />
+    <Compile Include="ClasseConception\LigneFichePresence.cs" />
+    <Compile Include="ClasseConception\LigneFicheReleveNote.cs" />
+    <Compile Include="ClasseConception\LigneHistorique.cs" />
+    <Compile Include="ClasseConception\LigneInsolvable.cs" />
+    <Compile Include="ClasseConception\LigneJury.cs" />
+    <Compile Include="ClasseConception\LigneEtatMoyenne.cs" />
+    <Compile Include="ClasseConception\LigneNote.cs" />
+    <Compile Include="ClasseConception\LignePrestation.cs" />
+    <Compile Include="ClasseConception\LigneProfilAcademique.cs" />
+    <Compile Include="ClasseConception\LigneProgramme.cs" />
+    <Compile Include="ClasseConception\LigneProgrammer.cs" />
+    <Compile Include="ClasseConception\LigneRecapitulatif.cs" />
+    <Compile Include="ClasseConception\LigneRecapSeq.cs" />
+    <Compile Include="ClasseConception\LigneSaisieAnonymat.cs" />
+    <Compile Include="ClasseConception\LigneSaisieAppreciationMoyenne.cs" />
+    <Compile Include="ClasseConception\LigneSaisieAppreciationResultat.cs" />
+    <Compile Include="ClasseConception\LigneSanction.cs" />
+    <Compile Include="ClasseConception\LigneSituationFinanciere.cs" />
+    <Compile Include="ClasseConception\LigneVersement.cs" />
+    <Compile Include="ClasseConception\MoyennesScolaireEleveBE.cs" />
+    <Compile Include="ClasseConception\PourcentageCumuleDA.cs" />
+    <Compile Include="ClasseConception\ProfilAcademiqueBE.cs" />
+    <Compile Include="ClasseConception\ResultatsScolaireEleveBE.cs" />
+    <Compile Include="ClasseConception\Synthese.cs" />
+    <Compile Include="DataAccess\JournalDA.cs" />
+    <Compile Include="DataAccess\MoyennesAnnuellesDA.cs" />
+    <Compile Include="DataAccess\MoyennesDA.cs" />
+    <Compile Include="DataAccess\MoyennesTrimestrielsDA.cs" />
+    <Compile Include="DataAccess\ResultatAnnuelDA.cs" />
+    <Compile Include="DataAccess\ResultatDA.cs" />
+    <Compile Include="DataAccess\ResultatTrimestrielDA.cs" />
+    <Compile Include="DataAccess\StatistiqueClasseDA.cs" />
+    <Compile Include="DataAccess\StatistiqueNiveauDA.cs" />
+    <Compile Include="DataAccess\TrimestreDA.cs" />
+    <Compile Include="SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AnnulationVenteUI.xaml.cs">
+      <DependentUpon>AnnulationVenteUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssistanceCreationClasseUI.xaml.cs">
+      <DependentUpon>AssistanceCreationClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BilanFinancierUI.xaml.cs">
+      <DependentUpon>BilanFinancierUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BilanSequentielUI.xaml.cs">
+      <DependentUpon>BilanSequentielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BulletinAnnuelUI.xaml.cs">
+      <DependentUpon>BulletinAnnuelUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BulletinSequentielUI.xaml.cs">
+      <DependentUpon>BulletinSequentielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BulletinTrimestrielUI.xaml.cs">
+      <DependentUpon>BulletinTrimestrielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CertificatScolariteUI.xaml.cs">
+      <DependentUpon>CertificatScolariteUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConfigurerServeurNotificationUI.xaml.cs">
+      <DependentUpon>ConfigurerServeurNotificationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConnexionUI.xaml.cs">
+      <DependentUpon>ConnexionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConvocationParentUC.xaml.cs">
+      <DependentUpon>ConvocationParentUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ConvocationProfUC.xaml.cs">
+      <DependentUpon>ConvocationProfUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangementClasseUI.xaml.cs">
+      <DependentUpon>ChangementClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EnvoiPersonnaliseUC.xaml.cs">
+      <DependentUpon>EnvoiPersonnaliseUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EtatVersementUI.xaml.cs">
+      <DependentUpon>EtatVersementUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FicheDeReleveDeNotes2UI.xaml.cs">
+      <DependentUpon>FicheDeReleveDeNotes2UI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JournalCaisseUI.xaml.cs">
+      <DependentUpon>JournalCaisseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StatComparatifMatiereClasseUI.xaml.cs">
+      <DependentUpon>StatComparatifMatiereClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DemarrageUI.xaml.cs">
+      <DependentUpon>DemarrageUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EleveDuneClasseUI.xaml.cs">
+      <DependentUpon>EleveDuneClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EnvoyerResultatUC.xaml.cs">
+      <DependentUpon>EnvoyerResultatUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Etape1CreationClasse.xaml.cs">
+      <DependentUpon>Etape1CreationClasse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Etape2CreationClasse.xaml.cs">
+      <DependentUpon>Etape2CreationClasse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Etape3CreationClasse.xaml.cs">
+      <DependentUpon>Etape3CreationClasse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Etape4CreationClasse.xaml.cs">
+      <DependentUpon>Etape4CreationClasse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Etape5CreationClasse.xaml.cs">
+      <DependentUpon>Etape5CreationClasse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EtatOperationUI.xaml.cs">
+      <DependentUpon>EtatOperationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EtatPrestationUI.xaml.cs">
+      <DependentUpon>EtatPrestationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EtatVenteArticleUI.xaml.cs">
+      <DependentUpon>EtatVenteArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Etat_Operation_PrestationUI.xaml.cs">
+      <DependentUpon>Etat_Operation_PrestationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FicheDeDisciplineUI.xaml.cs">
+      <DependentUpon>FicheDeDisciplineUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FicheDePresenceUI.xaml.cs">
+      <DependentUpon>FicheDePresenceUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FicheDeReleveDeNotesUI.xaml.cs">
+      <DependentUpon>FicheDeReleveDeNotesUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogic\GestionRecapitulatifTrimestriellBL.cs" />
+    <Compile Include="UI\GestionDesNotificationsUI.xaml.cs">
+      <DependentUpon>GestionDesNotificationsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HistoriqueCaisseUI.xaml.cs">
+      <DependentUpon>HistoriqueCaisseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InsolvablesUI.xaml.cs">
+      <DependentUpon>InsolvablesUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JournalUI.xaml.cs">
+      <DependentUpon>JournalUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JuryUI.xaml.cs">
+      <DependentUpon>JuryUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MoyennesAnnuellesUI.xaml.cs">
+      <DependentUpon>MoyennesAnnuellesUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MoyenneSequentielleUI.xaml.cs">
+      <DependentUpon>MoyenneSequentielleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MoyenneTrimestrielleUI.xaml.cs">
+      <DependentUpon>MoyenneTrimestrielleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\NouveauSetArticleUI.xaml.cs">
+      <DependentUpon>NouveauSetArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProfilScolaireUI.xaml.cs">
+      <DependentUpon>ProfilScolaireUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProgressDialog.xaml.cs">
+      <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProgressDialogResult.cs" />
+    <Compile Include="UI\ProgressDialogSettings.cs" />
+    <Compile Include="UI\RapportNotificationUC.xaml.cs">
+      <DependentUpon>RapportNotificationUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RecalculerResultatDunEleveUI.xaml.cs">
+      <DependentUpon>RecalculerResultatDunEleveUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RecapitulatifAnnuelUI.xaml.cs">
+      <DependentUpon>RecapitulatifAnnuelUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RecapitulatifSequentielUI.xaml.cs">
+      <DependentUpon>RecapitulatifSequentielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RecapitulatifTrimestrielUI.xaml.cs">
+      <DependentUpon>RecapitulatifTrimestrielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RechercherEleveUI.xaml.cs">
+      <DependentUpon>RechercherEleveUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultatAnnuelUI.xaml.cs">
+      <DependentUpon>ResultatAnnuelUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultatSequentielUI.xaml.cs">
+      <DependentUpon>ResultatSequentielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ResultatTrimestrielUI.xaml.cs">
+      <DependentUpon>ResultatTrimestrielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReunionEleveUC.xaml.cs">
+      <DependentUpon>ReunionEleveUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReunionUC.xaml.cs">
+      <DependentUpon>ReunionUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoleUI.xaml.cs">
+      <DependentUpon>RoleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SituationFinanciereUI.xaml.cs">
+      <DependentUpon>SituationFinanciereUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SortieArticleUI.xaml.cs">
+      <DependentUpon>SortieArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StatComparaisonResultatNiveauUI.xaml.cs">
+      <DependentUpon>StatComparaisonResultatNiveauUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StatComparatifResultatClasseUI.xaml.cs">
+      <DependentUpon>StatComparatifResultatClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StatProgressionClasseUI.xaml.cs">
+      <DependentUpon>StatProgressionClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StatutFinancierUI.xaml.cs">
+      <DependentUpon>StatutFinancierUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StatVariationNiveauParMatiereUI.xaml.cs">
+      <DependentUpon>StatVariationNiveauParMatiereUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\teamUI.xaml.cs">
+      <DependentUpon>teamUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowEditInfosDemarrageUI.xaml.cs">
+      <DependentUpon>WindowEditInfosDemarrageUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowEtatDesSanctionDuneClasseUI.xaml.cs">
+      <DependentUpon>WindowEtatDesSanctionDuneClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererBulletinsAnnuelUI.xaml.cs">
+      <DependentUpon>WindowGenererBulletinsAnnuelUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererBulletinsSequentielUI.xaml.cs">
+      <DependentUpon>WindowGenererBulletinsSequentielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererBulletinsTrimestrielUI.xaml.cs">
+      <DependentUpon>WindowGenererBulletinsTrimestrielUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererCertificatScolariteDuneClasseUI.xaml.cs">
+      <DependentUpon>WindowGenererCertificatScolariteDuneClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererCertificatScolariteUI.xaml.cs">
+      <DependentUpon>WindowGenererCertificatScolariteUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererStatistiqueDuneClasseUI.xaml.cs">
+      <DependentUpon>WindowGenererStatistiqueDuneClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererStatistiqueDunNiveauUI.xaml.cs">
+      <DependentUpon>WindowGenererStatistiqueDunNiveauUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowProfilAcademiqueUI.xaml.cs">
+      <DependentUpon>WindowProfilAcademiqueUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowSaisieDesAppreciationsDesMoyennesUI.xaml.cs">
+      <DependentUpon>WindowSaisieDesAppreciationsDesMoyennesUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowSaisieDesAppreciationsDesResultatsUI.xaml.cs">
+      <DependentUpon>WindowSaisieDesAppreciationsDesResultatsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowSettings.cs" />
+    <Compile Include="Utilitaire\ChoixLangue.cs" />
+    <Compile Include="Utilitaire\CreerEtat.cs" />
+    <Compile Include="DataAccess\GroupeMatiereDA.cs" />
+    <Compile Include="DataAccess\GroupePrivilegeDA.cs" />
+    <Compile Include="DataAccess\InscrireDA.cs" />
+    <Compile Include="DataAccess\MagasinDA.cs" />
+    <Compile Include="DataAccess\MatiereDA.cs" />
+    <Compile Include="DataAccess\MentionDA.cs" />
+    <Compile Include="DataAccess\MontantTrancheDA.cs" />
+    <Compile Include="DataAccess\NiveauDA.cs" />
+    <Compile Include="DataAccess\NotesDA.cs" />
+    <Compile Include="DataAccess\OperationDA.cs" />
+    <Compile Include="DataAccess\ParametresDA.cs" />
+    <Compile Include="DataAccess\PayerDA.cs" />
+    <Compile Include="DataAccess\PaysDA.cs" />
+    <Compile Include="DataAccess\PrestationDA.cs" />
+    <Compile Include="DataAccess\PrivilegeDA.cs" />
+    <Compile Include="DataAccess\ProgrammerDA.cs" />
+    <Compile Include="DataAccess\RealiserDA.cs" />
+    <Compile Include="DataAccess\RegionDA.cs" />
+    <Compile Include="DataAccess\SanctionnerDA.cs" />
+    <Compile Include="DataAccess\SequenceDA.cs" />
+    <Compile Include="DataAccess\SerieDA.cs" />
+    <Compile Include="DataAccess\SetarticleDA.cs" />
+    <Compile Include="DataAccess\StockerDA.cs" />
+    <Compile Include="DataAccess\TrancheDA.cs" />
+    <Compile Include="DataAccess\TypeclasseDA.cs" />
+    <Compile Include="DataAccess\TypeevaluationDA.cs" />
+    <Compile Include="DataAccess\TypeoperationDA.cs" />
+    <Compile Include="DataAccess\UtilisateurDA.cs" />
+    <Compile Include="UI\AffecterMatiereUI.xaml.cs">
+      <DependentUpon>AffecterMatiereUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DepartementUI.xaml.cs">
+      <DependentUpon>DepartementUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DisciplineUI.xaml.cs">
+      <DependentUpon>DisciplineUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EleveUI.xaml.cs">
+      <DependentUpon>EleveUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EtatUI.xaml.cs">
+      <DependentUpon>EtatUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GroupeUtilisateursUI.xaml.cs">
+      <DependentUpon>GroupeUtilisateursUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ModifierPasswordUI.xaml.cs">
+      <DependentUpon>ModifierPasswordUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MontantTrancheUI.xaml.cs">
+      <DependentUpon>MontantTrancheUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Ops_caisseUI.xaml.cs">
+      <DependentUpon>Ops_caisseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Payer_ArticleUI.xaml.cs">
+      <DependentUpon>Payer_ArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Payer_PrestationUI.xaml.cs">
+      <DependentUpon>Payer_PrestationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaysUI.xaml.cs">
+      <DependentUpon>PaysUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProgrammeClasseUI.xaml.cs">
+      <DependentUpon>ProgrammeClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RegionUI.xaml.cs">
+      <DependentUpon>RegionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaisieAnonymatUI.xaml.cs">
+      <DependentUpon>SaisieAnonymatUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaisieNotesAvecAnonymatsUI.xaml.cs">
+      <DependentUpon>SaisieNotesAvecAnonymatsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaisieNotesSansAnonymatsUI.xaml.cs">
+      <DependentUpon>SaisieNotesSansAnonymatsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaisirSanctionEleveUI.xaml.cs">
+      <DependentUpon>SaisirSanctionEleveUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaisirSanctionsClasseUI.xaml.cs">
+      <DependentUpon>SaisirSanctionsClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UtilisateursUI.xaml.cs">
+      <DependentUpon>UtilisateursUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Utilitaires.cs" />
+    <Compile Include="UI\WindowAddEditArticleUI.xaml.cs">
+      <DependentUpon>WindowAddEditArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditCategorieArticleUI.xaml.cs">
+      <DependentUpon>WindowAddEditCategorieArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditCategorieEleveUI.xaml.cs">
+      <DependentUpon>WindowAddEditCategorieEleveUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditClasseUI.xaml.cs">
+      <DependentUpon>WindowAddEditClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditCycleUI.xaml.cs">
+      <DependentUpon>WindowAddEditCycleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowListeEleveParClasseUI.xaml.cs">
+      <DependentUpon>WindowListeEleveParClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditEnseignantUI.xaml.cs">
+      <DependentUpon>WindowAddEditEnseignantUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditGroupeMatiereUI.xaml.cs">
+      <DependentUpon>WindowAddEditGroupeMatiereUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditMagasinUI.xaml.cs">
+      <DependentUpon>WindowAddEditMagasinUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditMatiereUI.xaml.cs">
+      <DependentUpon>WindowAddEditMatiereUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditNiveauUI.xaml.cs">
+      <DependentUpon>WindowAddEditNiveauUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditParametresUI.xaml.cs">
+      <DependentUpon>WindowAddEditParametresUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditPrestationUI.xaml.cs">
+      <DependentUpon>WindowAddEditPrestationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditSequenceUI.xaml.cs">
+      <DependentUpon>WindowAddEditSequenceUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEDitSerieUI.xaml.cs">
+      <DependentUpon>WindowAddEDitSerieUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditTrimestreUI.xaml.cs">
+      <DependentUpon>WindowAddEditTrimestreUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditTypeClasseUI.xaml.cs">
+      <DependentUpon>WindowAddEditTypeClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddEditTypeEvaluationUI.xaml.cs">
+      <DependentUpon>WindowAddEditTypeEvaluationUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowAddSetArticleUI.xaml.cs">
+      <DependentUpon>WindowAddSetArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowApprovisionnementArticleUI.xaml.cs">
+      <DependentUpon>WindowApprovisionnementArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowCreerModifierTrancheUI.xaml.cs">
+      <DependentUpon>WindowCreerModifierTrancheUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowDefinirEvaluationMatiereUI.xaml.cs">
+      <DependentUpon>WindowDefinirEvaluationMatiereUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowDefinirMentionUI.xaml.cs">
+      <DependentUpon>WindowDefinirMentionUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowEditSetArticleUI.xaml.cs">
+      <DependentUpon>WindowEditSetArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererResultatDunEleveUI.xaml.cs">
+      <DependentUpon>WindowGenererResultatDunEleveUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererResultatsAnnuelsUI.xaml.cs">
+      <DependentUpon>WindowGenererResultatsAnnuelsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererResultatsSequentielsUI.xaml.cs">
+      <DependentUpon>WindowGenererResultatsSequentielsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGenererResultatsTrimestrielsUI.xaml.cs">
+      <DependentUpon>WindowGenererResultatsTrimestrielsUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGetEtatStockArticleUI.xaml.cs">
+      <DependentUpon>WindowGetEtatStockArticleUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowGetNbreEleveParClasseUI.xaml.cs">
+      <DependentUpon>WindowGetNbreEleveParClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowInscriptionEleve2UI.xaml.cs">
+      <DependentUpon>WindowInscriptionEleve2UI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowInscriptionEleveUI.xaml.cs">
+      <DependentUpon>WindowInscriptionEleveUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowListeDesElevesDuneClasseUI.xaml.cs">
+      <DependentUpon>WindowListeDesElevesDuneClasseUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\WindowTitularisationEnseignantUI.xaml.cs">
+      <DependentUpon>WindowTitularisationEnseignantUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilitaire\Cryptage.cs" />
+    <Compile Include="Utilitaire\ExportToExcel.cs" />
+    <Compile Include="Utilitaire\GestionRepertoire.cs" />
+    <Compile Include="Utilitaire\Tools.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessEntity\AcheterBE.cs" />
+    <Compile Include="BusinessEntity\AppartenirBE.cs" />
+    <Compile Include="BusinessEntity\ArticleBE.cs" />
+    <Compile Include="BusinessEntity\CategorieArticleBE.cs" />
+    <Compile Include="BusinessEntity\CategorieEleveBE.cs" />
+    <Compile Include="BusinessEntity\ClasseBE.cs" />
+    <Compile Include="BusinessEntity\ComposerBE.cs" />
+    <Compile Include="BusinessEntity\CycleBE.cs" />
+    <Compile Include="BusinessEntity\DepartementBE.cs" />
+    <Compile Include="BusinessEntity\DirigerBE.cs" />
+    <Compile Include="BusinessEntity\DisciplineBE.cs" />
+    <Compile Include="BusinessEntity\EleveBE.cs" />
+    <Compile Include="BusinessEntity\EnseignantBE.cs" />
+    <Compile Include="BusinessEntity\EvaluerBE.cs" />
+    <Compile Include="BusinessEntity\GroupeBE.cs" />
+    <Compile Include="DataAccess\AcheterDA.cs" />
+    <Compile Include="DataAccess\AppartenirDA.cs" />
+    <Compile Include="DataAccess\ArticleDA.cs" />
+    <Compile Include="DataAccess\CategorieArticleDA.cs" />
+    <Compile Include="DataAccess\CategorieEleveDA.cs" />
+    <Compile Include="DataAccess\ClasseDA.cs" />
+    <Compile Include="DataAccess\ComposerDA.cs" />
+    <Compile Include="DataAccess\Connexion.cs" />
+    <Compile Include="DataAccess\CycleDA.cs" />
+    <Compile Include="DataAccess\DA.cs" />
+    <Compile Include="DataAccess\DepartementDA.cs" />
+    <Compile Include="DataAccess\DirigerDA.cs" />
+    <Compile Include="DataAccess\DisciplineDA.cs" />
+    <Compile Include="DataAccess\EleveDA.cs" />
+    <Compile Include="DataAccess\EnseignantDA.cs" />
+    <Compile Include="DataAccess\EvaluerDA.cs" />
+    <Compile Include="DataAccess\GroupeDA.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SplashScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\AffecterMatiereUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\AnnulationVenteUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\AssistanceCreationClasseUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\BilanFinancierUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\BilanSequentielUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\BulletinAnnuelUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\BulletinSequentielUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\BulletinTrimestrielUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\CertificatScolariteUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ConfigurerServeurNotificationUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ConnexionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ConvocationParentUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ConvocationProfUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ChangementClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\EnvoiPersonnaliseUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\EtatVersementUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\FicheDeReleveDeNotes2UI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\JournalCaisseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\StatComparatifMatiereClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\DemarrageUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\DepartementUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\DisciplineUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\EleveDuneClasseUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\EleveUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\EnvoyerResultatUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Etape1CreationClasse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Etape2CreationClasse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Etape3CreationClasse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Etape4CreationClasse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Etape5CreationClasse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\EtatOperationUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\EtatPrestationUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\EtatUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\EtatVenteArticleUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Etat_Operation_PrestationUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\FicheDeDisciplineUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\FicheDePresenceUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\FicheDeReleveDeNotesUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\GestionDesNotificationsUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\GroupeUtilisateursUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\HistoriqueCaisseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\InsolvablesUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\JournalUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\JuryUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ModifierPasswordUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MontantTrancheUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MoyennesAnnuellesUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MoyenneSequentielleUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MoyenneTrimestrielleUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\NouveauSetArticleUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Ops_caisseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Payer_ArticleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Payer_PrestationUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\PaysUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ProfilScolaireUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ProgrammeClasseUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\RapportNotificationUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RecalculerResultatDunEleveUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RecapitulatifAnnuelUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RecapitulatifSequentielUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RecapitulatifTrimestrielUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RechercherEleveUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RegionUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ResultatAnnuelUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ResultatSequentielUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ResultatTrimestrielUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\ReunionEleveUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ReunionUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RoleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\SaisieAnonymatUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SaisieNotesAvecAnonymatsUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SaisieNotesSansAnonymatsUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SaisirSanctionEleveUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SaisirSanctionsClasseUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\SituationFinanciereUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\SortieArticleUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\StatComparaisonResultatNiveauUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\StatComparatifResultatClasseUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\StatProgressionClasseUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\StatutFinancierUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\StatVariationNiveauParMatiereUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\teamUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UtilisateursUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\WindowAddEditArticleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditCategorieArticleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditCategorieEleveUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditCycleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererStatistiqueDuneClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererStatistiqueDunNiveauUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowListeEleveParClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditEnseignantUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditGroupeMatiereUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditMagasinUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditMatiereUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditNiveauUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditParametresUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditPrestationUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditSequenceUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEDitSerieUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditTrimestreUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditTypeClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddEditTypeEvaluationUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowAddSetArticleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowApprovisionnementArticleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowCreerModifierTrancheUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowDefinirEvaluationMatiereUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowDefinirMentionUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowEditInfosDemarrageUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowEditSetArticleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowEtatDesSanctionDuneClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererBulletinsAnnuelUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererBulletinsSequentielUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererBulletinsTrimestrielUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererCertificatScolariteDuneClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererCertificatScolariteUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererResultatDunEleveUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererResultatsAnnuelsUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererResultatsSequentielsUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGenererResultatsTrimestrielsUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGetEtatStockArticleUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowGetNbreEleveParClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowInscriptionEleve2UI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowInscriptionEleveUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowListeDesElevesDuneClasseUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowProfilAcademiqueUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\WindowSaisieDesAppreciationsDesMoyennesUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\WindowSaisieDesAppreciationsDesResultatsUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\WindowTitularisationEnseignantUI.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="ECOLE_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\university.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Etats\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photos\default.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\favicon-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\plume.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photos\15A001.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photos\15A002.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo-Brain-Studio-blanc.png" />
+    <Resource Include="Images\Logo-Brain-Studio.png" />
+    <Resource Include="Images\plume.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="francais.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="anglais.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

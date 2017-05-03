@@ -1,0 +1,83 @@
+﻿<Window x:Class="Ecole.UI.WindowApprovisionnementArticleUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Approvisionnement d'Articles" Height="676" Width="812" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <Grid Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="788" Height="637">
+        <StackPanel Orientation="Horizontal" Margin="-2,3,0,347">
+            <GroupBox Header="Informations obligatoires" Height="258" Name="groupBox1" Width="644" Margin="15,15">
+                <Grid Height="179" Name="grid1" Width="543" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="28*" />
+                        <RowDefinition Height="28*" />
+                        <RowDefinition Height="28*" />
+                        <RowDefinition Height="28*" />
+                        <RowDefinition Height="28*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Article (*)" Height="25" HorizontalAlignment="Left" Name="lblArticle" VerticalAlignment="Top" Width="91" Margin="0,8,0,0" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="0,10,0,0" Name="cmbArticle" VerticalAlignment="Top" Width="128" Grid.Column="1" />
+                    <Label Content="Magasin (*)" Height="25" HorizontalAlignment="Left" Margin="14,10,0,0" Name="lblMagasin" VerticalAlignment="Top" Width="114" Grid.Column="2" />
+                    <ComboBox Height="22" HorizontalAlignment="Left" Name="cmbMagasin" VerticalAlignment="Top" Width="138" Grid.Column="2" Margin="132,10,0,0" Grid.ColumnSpan="2" />
+                    <Label Content="Prix unitaire (*)" Height="28" HorizontalAlignment="Left" Name="lblPrixUnitaire" VerticalAlignment="Top" Width="113" Grid.Row="1" Margin="0,13,0,0" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Name="txtPrixUnitaire" VerticalAlignment="Top" Width="128" Grid.Column="1" PreviewTextInput="txtPrixUnitaire_PreviewTextInput" Grid.Row="1" Margin="0,13,0,0" />
+                    <Label Content="Quantité (*)" Height="24" HorizontalAlignment="Left" Margin="14,13,0,0" Name="lblQuantite" VerticalAlignment="Top" Width="113" Grid.Column="2" Grid.Row="1" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="132,13,0,0" Name="txtQuantite" VerticalAlignment="Top" Width="136" Grid.Column="2" PreviewTextInput="txtQuantite_PreviewTextInput" Grid.ColumnSpan="2" Grid.Row="1" />
+                    <Label Content="Année (*)" Height="24" HorizontalAlignment="Left" Margin="0,12,0,0" Name="labelAnnee" VerticalAlignment="Top" Width="113" Grid.Row="2" Grid.RowSpan="2" />
+                    <TextBox Height="21" HorizontalAlignment="Left" Margin="0,14,0,0" Name="txtAnneeScolaire" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="2" TextChanged="txtAnneeScolaire_TextChanged" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" />
+                    <Label Content="/" Grid.Column="1" Grid.Row="2" Height="28" HorizontalAlignment="Left" Margin="77,13,0,0" Name="label1" VerticalAlignment="Top" Width="20" Grid.RowSpan="2" />
+                    <TextBox IsEnabled="False" Height="23" HorizontalAlignment="Left" Margin="104,13,0,0" Name="txtAnnee" VerticalAlignment="Top" Width="67" Grid.Column="1" Grid.Row="2" PreviewTextInput="txtAnnee_PreviewTextInput" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                    <Button Content="valider" Height="27" HorizontalAlignment="Left" Margin="75,24,0,0" Name="cmdValider" VerticalAlignment="Top" Width="132" Click="cmdValider_Click" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+                    <Button Content="Annuler" Height="27" HorizontalAlignment="Left" Name="cmdAnnuler" VerticalAlignment="Top" Width="136" Click="cmdAnnuler_Click" Grid.Row="3" Margin="52,24,0,0" Grid.Column="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                   </Grid>
+            </GroupBox>
+        </StackPanel>
+        <Grid Height="40" Name="grid" Margin="13,296,16,0" Background="#FF86B5E8" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="113*" />
+                <ColumnDefinition Width="178*" />
+                <ColumnDefinition Width="102*" />
+                <ColumnDefinition Width="188*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Article" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="lblFilterArticle" VerticalAlignment="Top" />
+            <ComboBox Height="26" HorizontalAlignment="Left" Margin="2,8,0,0" Name="cmbFilterArticle" VerticalAlignment="Top" Width="155" SelectionChanged="cmbFilterArticle_SelectionChanged" Grid.Column="1" />
+            <Label Content="Magasin" Height="28" HorizontalAlignment="Left" Margin="0,6,0,0" Name="lblFilterMagasin" VerticalAlignment="Top" Grid.Column="2" />
+            <ComboBox Height="26" HorizontalAlignment="Left" Margin="11,8,0,0" Name="cmbFilterMagasin" VerticalAlignment="Top" Width="166" SelectionChanged="cmbFilterMagasin_SelectionChanged" Grid.Column="3" />
+        </Grid>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Height="246" HorizontalAlignment="Left" Margin="12,335,0,0" Name="grdListeApprovisionnement" VerticalAlignment="Top" Width="761" ItemsSource="{Binding ListeApprovisionnements}" KeyUp="grdListeApprovisionnement_KeyUp" MouseDoubleClick="grdListeApprovisionnement_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding dateOperationString}" Header="Date Opération" Width="100" />
+                <DataGridTextColumn Binding="{Binding codeArticle}" Header="Article" Width="100" />
+                <DataGridTextColumn Binding="{Binding codeMagasin}" Header="Magasin" Width="110" />
+                <DataGridTextColumn Binding="{Binding stockDebut}" Header="Stock Début" Width="100" />
+                <DataGridTextColumn Binding="{Binding quantiteAchetee}" Header="Quantité Achetée" Width="120" />
+                <DataGridTextColumn Binding="{Binding puArticle}" Header="Prix Unitaire" Width="100" />
+                <DataGridTextColumn Binding="{Binding stockRestant}" Header="Stock restant" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Height="40" Name="gridAction" Margin="0,596,2,0" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button Content="Imprimer" Height="26" HorizontalAlignment="Left" Margin="14,7,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="135" Click="cmdImprimer_Click" />
+            <Button Content="Fermer" Height="26" HorizontalAlignment="Right" Margin="0,7,14,0" Name="cmdFermer" VerticalAlignment="Top" Width="135" Click="cmdFermer_Click" Grid.Column="2" />
+            <Button Content="Etat du stock" Height="30" HorizontalAlignment="Left" Margin="51,5,0,0" Name="cmdEtatDuSTosk" VerticalAlignment="Top" Width="158" Grid.Column="1" Click="cmdEtatDuSTosk_Click" />
+        </Grid>
+    </Grid>
+</Window>

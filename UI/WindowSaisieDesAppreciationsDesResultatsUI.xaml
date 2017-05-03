@@ -1,0 +1,70 @@
+﻿<Window x:Class="Ecole.UI.WindowSaisieDesAppreciationsDesResultatsUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Saisie des appréciations des Résultats" Height="673" Width="1296" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+    <StackPanel Background="#FFC8DDE2" Orientation="Vertical" Width="1287" Height="733">
+        <GroupBox Header="Informations obligatoires" Height="269" Name="groupBox1" Width="453" Margin="15,5">
+            <Grid Height="243" Name="grid1" Width="419" Background="#FF86B5E8">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="122*" />
+                    <ColumnDefinition Width="191*" />
+                </Grid.ColumnDefinitions>
+                <Label Content="Classe (*)" Height="28" HorizontalAlignment="Left" Margin="3,1,0,0" Name="lblClasse" VerticalAlignment="Top" Width="79" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="17,6,0,0" Name="cmbClasse" VerticalAlignment="Top" Width="151" Grid.Column="1" />
+                <Label Content="Période (*)" Height="28" HorizontalAlignment="Left" Name="lblPeriode" VerticalAlignment="Top" Width="79" Grid.Row="2" Margin="6,6,0,0" />
+                <Label Content="Année (*)" Height="31" HorizontalAlignment="Left" Name="lblAnnee" VerticalAlignment="Top" Width="79" Grid.Row="1" Margin="6,9,0,0" />
+                <ComboBox Height="23" HorizontalAlignment="Left" Margin="15,11,0,0" Name="cmbPeriode" VerticalAlignment="Top" Width="151" SelectionChanged="cmbPeriode_SelectionChanged" Grid.Column="1" Grid.Row="2" />
+                <Label Content="Choix (*)" Grid.Row="2" Height="28" HorizontalAlignment="Left" Name="lblChoixPeriode" VerticalAlignment="Top" Width="79" Margin="6,39,0,0" Grid.RowSpan="2" />
+                <ComboBox Grid.Row="3" Height="23" HorizontalAlignment="Left" Name="cmbChoixPeriode" VerticalAlignment="Top" Width="151" Grid.Column="1" Margin="16,4,0,0" />
+                <TextBox Height="23" Margin="17,10,174,0" Name="txtAnneeScolaire" VerticalAlignment="Top" TextChanged="txtAnneeScolaire_TextChanged" Grid.Column="1" Grid.Row="1" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" />
+                <Label Content="/" Height="23" HorizontalAlignment="Right" Margin="0,10,152,0" Name="label7" VerticalAlignment="Top" Width="17" Grid.Column="1" Grid.Row="1" />
+                <TextBox IsEnabled="False" Grid.Row="1" Height="23" HorizontalAlignment="Left" Name="txtAnnee" VerticalAlignment="Top" Width="62" Margin="105,11,0,0" Grid.Column="1" />
+                <Button Content="Annuler" Height="30" HorizontalAlignment="Left" Margin="49,10,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="100" Click="cmdAnnuler_Click" Grid.Row="4" Grid.Column="1" />
+                <Button Content="Valider" Height="30" HorizontalAlignment="Left" Margin="25,10,0,0" Name="cmdValider" VerticalAlignment="Top" Width="107" Click="cmdValider_Click" Grid.Row="4" />
+            </Grid>
+        </GroupBox>
+        <Grid Name="gridAction" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="88*" />
+                <ColumnDefinition Width="200*" />
+                <ColumnDefinition Width="144*" />
+                <ColumnDefinition Width="144*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell" Height="309" Name="grdListeDesResultats" Width="1441" ItemsSource="{Binding ListeDesMoyennes}" PreviewKeyDown="grdListeDesMoyennes_PreviewKeyDown" VirtualizingStackPanel.IsVirtualizing="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding nomEleve}" IsReadOnly="True" Header="Nom" Width="240" />
+                <DataGridTextColumn Binding="{Binding matricule}" IsReadOnly="True" Header="Matricule" Width="90" />
+                <DataGridTextColumn Binding="{Binding Periode}" IsReadOnly="True" Header="Période" Width="90" />
+                <DataGridTextColumn Binding="{Binding annee}" IsReadOnly="True" Header="Année" Width="90" />
+                <DataGridTextColumn Binding="{Binding moyenne}" IsReadOnly="True" Header="Moyenne" Width="90" />
+                <DataGridTextColumn Binding="{Binding mention}" IsReadOnly="True" Header="Mention" Width="90" />
+                <DataGridTextColumn Binding="{Binding decision}" IsReadOnly="True" Header="Décision" Width="90" />
+                <DataGridTextColumn Binding="{Binding rang}" IsReadOnly="True" Header="Rang" Width="90" />
+                <DataGridTextColumn Binding="{Binding moyenneClasse}" IsReadOnly="True" Header="Moy. Classe" Width="90" />
+                <DataGridTextColumn Binding="{Binding appreciation}" IsReadOnly="False" Header="Appréciation" Width="300" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Grid Background="#FF86B5E8" Height="37" Name="grid2" Width="1450">
+            <Button Click="cmdFermer_Click" Content="Fermer" Height="31" HorizontalAlignment="Right" Margin="0,3,461,0" Name="cmdFermer" VerticalAlignment="Top" Width="172" />
+            <Button Content="Imprimer" Height="31" HorizontalAlignment="Left" Margin="302,3,0,0" Name="cmbImprimer" VerticalAlignment="Top" Width="184" Click="cmbImprimer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

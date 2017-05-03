@@ -1,0 +1,72 @@
+﻿<Window x:Class="Ecole.UI.DisciplineUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Brain : Gestion des Sanctions" Height="521" Width="605" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <StackPanel Height="471" Name="stackPanel1" Width="578" Background="#FFC8DDE2">
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Informations requises" Height="168" Name="groupBox1" Width="380" HorizontalAlignment="Left" Margin="15,15">
+                <Grid Height="137" Name="grid1" Width="342" Background="#FF86B5E8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="134*" />
+                        <ColumnDefinition Width="231*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Code sanction (*)" Height="28" HorizontalAlignment="Left" Margin="0,6,0,0" Name="lblCodeSanction" VerticalAlignment="Top" Width="114" />
+                    <Label Content="Nom sanction (*)" Height="28" HorizontalAlignment="Left" Margin="0,0,0,71" Name="lblNomSanction" VerticalAlignment="Bottom" Width="114" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="1,8,0,0" Name="txtCodeSanction" VerticalAlignment="Top" Width="179" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="0,40,0,0" Name="txtNomSanction" VerticalAlignment="Top" Width="179" />
+                    <Label Content="Variable (*)" Height="28" HorizontalAlignment="Left" Margin="0,64,0,0" Name="lblVariable" VerticalAlignment="Top" />
+                    <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="0,69,0,0" Name="cmbVariable" VerticalAlignment="Top" Width="180" />
+                    <Label Content="Priorité (*)" Height="28" HorizontalAlignment="Left" Margin="6,103,0,0" Name="lblPriorite" VerticalAlignment="Top" />
+                    <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="0,103,0,0" Name="txtPriorite" VerticalAlignment="Top" Width="120" PreviewTextInput="txtPriorite_PreviewTextInput" />
+                </Grid>
+            </GroupBox>
+            <Grid Height="135" Name="grid2" Width="85" Margin="10,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Content="Enregistrer" Height="23" HorizontalAlignment="Left" Name="cmdEnregistrer" VerticalAlignment="Top" Width="75" Click="cmdEnregistrer_Click" Grid.RowSpan="2" Margin="6,24,0,0" />
+                <Button Content="Annuler" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="6,35,0,0" Name="cmdAnnuler" VerticalAlignment="Top" Width="75" Click="cmdAnnuler_Click" Grid.RowSpan="2" />
+            </Grid>
+        </StackPanel>
+        <GroupBox Header="Liste des Sanctions" Height="216" Width="563">
+            <DataGrid AutoGenerateColumns="False" Height="200" Name="grdListe" Width="547" Margin="10" VerticalScrollBarVisibility="Visible" VirtualizingStackPanel.IsVirtualizing="False"
+                  CanUserAddRows="False" IsReadOnly="True" ItemsSource="{Binding}" KeyUp="grdListe_KeyUp" MouseDoubleClick="grdListe_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding codeSanction}" Header="Code"
+                      IsReadOnly="True" x:Name="grdCode" Width="130">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding nomSanction}" Header="Nom"
+                      IsReadOnly="True" x:Name="grdNom" Width="130">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding variable}" Header="Variable"
+                      IsReadOnly="True" x:Name="grdVariable" Width="130">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding unite}" Header="Unité"
+                      IsReadOnly="True" x:Name="grdUnite" Width="50">
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding priorite}" Header="Priorité"
+                      IsReadOnly="True" x:Name="grdPriorite" Width="80">
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <Grid Height="46" Name="grid" Width="527" Margin="0,10,0,0" Background="#FF86B5E8">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="176*" />
+                <ColumnDefinition Width="137*" />
+                <ColumnDefinition Width="39*" />
+                <ColumnDefinition Width="176*" />
+            </Grid.ColumnDefinitions>
+            <Button Content="Imprimer la liste" Height="23" HorizontalAlignment="Left" Margin="11,11,0,0" Name="cmdImprimer" VerticalAlignment="Top" Width="138" Click="cmdImprimer_Click" Grid.Column="3" />
+            <Button Content="Fermer" Height="23" HorizontalAlignment="Left" Margin="27,11,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="145" Click="cmdFermer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

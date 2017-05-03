@@ -1,0 +1,65 @@
+﻿<Window x:Class="Ecole.UI.ConfigurerServeurNotificationUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Configurer les paramètres des serveurs de notifications" Height="383" Width="562" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <StackPanel Name="stackPanel1" Background="#FFC8DDE2" Height="337">
+        <!--<GroupBox Header="Paramètres du serveur et compte de messagerie" Height="209" Name="groupBox1" Width="495" Margin="10">
+            <Grid Background="#FF86B5E8" Height="166" Width="464">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="167*" />
+                    <ColumnDefinition Width="316*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="Serveur SMTP" Height="28" HorizontalAlignment="Left" Margin="18,0,0,0" Name="lblServeurEmail" VerticalAlignment="Top" />
+                <Label Content="Port du serveur" Grid.RowSpan="2" Height="28" HorizontalAlignment="Left" Margin="18,27,0,0" Name="lblPortEmail" VerticalAlignment="Top" />
+                <Label Content="Activer SSL" Height="28" HorizontalAlignment="Left" Margin="18,0,0,0" Name="lblSSL" VerticalAlignment="Top" Grid.Row="2" />
+                <Label Content="Email d'envoi" Height="28" HorizontalAlignment="Left" Margin="18,0,0,0" Name="lblEmail" VerticalAlignment="Top" Grid.Row="3" />
+                <Label Content="Mot de passe" Grid.RowSpan="2" Height="28" HorizontalAlignment="Left" Margin="18,0,0,0" Name="lblPassword" VerticalAlignment="Top" Grid.Row="4" />
+                <Label Content="Confirmer mot de passe" Height="28" HorizontalAlignment="Left" Margin="20,0,0,0" Name="lblConfirmPassword" VerticalAlignment="Top" Grid.Row="5" />
+                <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="9,0,0,0" Name="txtServeurEmail" VerticalAlignment="Top" Width="270" />
+                <TextBox Grid.RowSpan="2" Height="23" HorizontalAlignment="Left" Margin="9,27,0,0" Name="txtPortEmail" VerticalAlignment="Top" Width="270" Grid.Column="1" />
+                <RadioButton Content="OUI" GroupName="ssl" Grid.Column="1" Grid.Row="2" Height="16" HorizontalAlignment="Left" Margin="8,6,0,0" Name="radioSslOui" VerticalAlignment="Top" />
+                <RadioButton Content="NON" GroupName="ssl" Grid.Column="1" Grid.Row="2" Height="16" HorizontalAlignment="Left" Margin="68,5,0,0" Name="radioSslNon" VerticalAlignment="Top" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="9,0,0,0" Name="txtEmail" VerticalAlignment="Top" Width="270" Grid.Column="1" Grid.Row="3" />
+                <PasswordBox Grid.Column="1" Grid.Row="4" Height="23" HorizontalAlignment="Left" Margin="8,1,0,0" Name="pwdEmail" VerticalAlignment="Top" Width="271" />
+                <PasswordBox Height="23" HorizontalAlignment="Left" Margin="9,0,0,0" Name="pwdEmailConfirm" VerticalAlignment="Top" Width="271" Grid.Column="1" Grid.Row="5" />
+            </Grid>
+        </GroupBox>-->
+        <GroupBox Grid.ColumnSpan="2" Grid.RowSpan="6" Header="Paramètres du serveur et compte de sms" Height="180" Margin="10" Name="groupBox2" Width="495">
+            <Grid Background="#FF86B5E8" Height="141" Width="464">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="167*" />
+                    <ColumnDefinition Width="316*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Label Content="URL Serveur SMS" Height="28" HorizontalAlignment="Left" Margin="18,0,0,0" Name="label1" VerticalAlignment="Top" />
+                <Label Content="Nom d'utilisateur" Height="28" HorizontalAlignment="Left" Margin="18,0,0,0" Name="label2" VerticalAlignment="Top" Grid.Row="2" />
+                <Label Content="Mot de passe" Grid.Row="3" Height="28" HorizontalAlignment="Left" Margin="18,1,0,0" Name="label5" VerticalAlignment="Top" />
+                <Label Content="Confirmer mot de passe" Grid.Row="4" Height="28" HorizontalAlignment="Left" Margin="18,0,0,0" Name="label6" VerticalAlignment="Top" />
+                <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="9,0,0,0" Name="txtServeurSMS" VerticalAlignment="Top" Width="270" />
+                <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="9,0,0,0" Name="txtNomUtilisateur" VerticalAlignment="Top" Width="270" Grid.Row="2" />
+                <PasswordBox Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="8,1,0,0" Name="pwdSMS" VerticalAlignment="Top" Width="271" />
+                <PasswordBox Grid.Column="1" Grid.Row="4" Height="23" HorizontalAlignment="Left" Margin="8,0,0,0" Name="pwdSMSConfirm" VerticalAlignment="Top" Width="271" />
+                <Label Content="Numéro de l'utilisateur" Height="28" HorizontalAlignment="Left" Margin="17,0,0,0" Name="label3" VerticalAlignment="Top" Grid.Row="1" />
+                <TextBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="9,0,0,0" Name="txtNumero" VerticalAlignment="Top" Width="270" Grid.Row="1" />
+            </Grid>
+        </GroupBox>
+        <Grid Height="35" Name="grid2" Width="540" Background="#FF86B5E8" Margin="0,100">
+            <Button Content="Valider" Height="23" HorizontalAlignment="Right" Margin="0,6,22,0" Name="cmdValider" VerticalAlignment="Top" Width="174" Click="cmdValider_Click" />
+            <Button Content="Fermer" Height="23" HorizontalAlignment="Left" Margin="21,6,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="174" Click="cmdFermer_Click" />
+        </Grid>
+    </StackPanel>
+</Window>

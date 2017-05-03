@@ -1,0 +1,96 @@
+﻿<Window x:Class="Ecole.UI.Ops_caisse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School Brain : Operation de caisse" Height="666" Width="843" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBox x:Name="PART_TextBox"
+                         Text="{Binding Path=SelectedDate, StringFormat='dd-MM-yyyy', 
+                         RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate DataType="Operation" x:Name="MyCellTemplateRemove">
+            <Button x:Name="RemoveRow" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Remove"/>
+        </DataTemplate>
+        <DataTemplate DataType="" x:Name="MyCellTemplateEdit">
+            <Button x:Name="EditRow" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Content="Edit"/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Background="#FFC8DDE2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="747">
+        
+        <Rectangle Height="206" HorizontalAlignment="Left" Margin="6,35,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" Width="588" Fill="#FF86B5E8" />
+        <Label Content="Type Opération" Height="28" HorizontalAlignment="Left" Margin="31,61,0,0" Name="lblTypeOperation" VerticalAlignment="Top" />
+        <!--<Label Content="Opération" Height="28" HorizontalAlignment="Left" Margin="31,56,0,0" Name="lblOperation" VerticalAlignment="Top" />-->
+        <Label Content="Motif" Height="28" HorizontalAlignment="Left" Margin="31,95,0,0" Name="lblMotif" VerticalAlignment="Top" />
+        <Label Content="Montant" Height="28" HorizontalAlignment="Left" Margin="31,131,0,0" Name="lblMontant" VerticalAlignment="Top" />
+        <Label Content="Date Opération" Height="28" HorizontalAlignment="Left" Margin="31,165,0,0" Name="lblDateOperation" VerticalAlignment="Top" />
+        <Label Content="Concerne" Height="28" HorizontalAlignment="Left" Margin="32,199,0,0" Name="lblConcerne" VerticalAlignment="Top" Width="91" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="144,61,0,0" Name="cmbTypeOperation" VerticalAlignment="Top" Width="166" SelectionChanged="cmbTypeOperation_SelectionChanged" />
+        <!--<ComboBox Height="23" HorizontalAlignment="Left" Margin="144,58,0,0" Name="cmbOperation" VerticalAlignment="Top" Width="166" />-->
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="144,95,0,0" Name="txtMotif" VerticalAlignment="Top" Width="433" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="144,131,0,0" Name="txtMontant" VerticalAlignment="Top" Width="166" PreviewTextInput="txtMontant_PreviewTextInput" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="144,168,0,0" Name="dpiDateOperation" VerticalAlignment="Top" Width="166" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="146,200,0,0" Name="txtConcerne" VerticalAlignment="Top" Width="431" />
+        <Rectangle Height="268" HorizontalAlignment="Left" Margin="4,268,0,0" Name="rectangle2" Stroke="Black" VerticalAlignment="Top" Width="731" Fill="#FF86B5E8" />
+        <Label Content="Date" Height="28" HorizontalAlignment="Left" Margin="12,277,0,0" Name="lblDateOperation2" VerticalAlignment="Top" />
+        <Label Content="Operation" Height="28" HorizontalAlignment="Left" Margin="240,275,0,0" Name="lblOperation2" VerticalAlignment="Top" />
+        <Label Content="Motif" Height="28" HorizontalAlignment="Right" Margin="0,279,217,0" Name="lblMotif2" VerticalAlignment="Top" />
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="73,277,0,0" Name="dpiDateOperation2" VerticalAlignment="Top" Width="138" SelectedDateChanged="dpiDateOperation2_SelectedDateChanged" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="309,279,0,0" Name="cmbOperation2" VerticalAlignment="Top" Width="120" SelectionChanged="cmbOperation2_SelectionChanged" />
+        <TextBox Height="26" HorizontalAlignment="Left" Margin="536,279,0,0" Name="txtMotif2" VerticalAlignment="Top" Width="179" LostFocus="txtMotif2_LostFocus" KeyUp="txtMotif2_KeyUp" />
+        <DataGrid AutoGenerateColumns="False" Height="197" IsReadOnly="True"
+          HorizontalAlignment="Left" Margin="17,326,0,0" CanUserAddRows="false"
+          Name="grdListe" VerticalAlignment="Top" Width="710" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" MouseDoubleClick="grdListe_MouseDoubleClick" ItemsSource="{Binding}" KeyUp="grdListe_KeyUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding codeop}" Header="Code"
+                      IsReadOnly="True" x:Name="grdCodeOP" Width="75">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding login}" Header="Login"
+                      IsReadOnly="True" x:Name="grdLogin" Width="75">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding numeroop, Mode=TwoWay}"
+                      Header="NumeroOp" x:Name="grdNumeroOp" IsReadOnly="True" Width="75">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding motif, Mode=TwoWay}"
+                      Header="Motif" x:Name="grdMotif" IsReadOnly="True" Width="150">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding montant, Mode=TwoWay}"
+                      Header="Montant" x:Name="grdMontant" IsReadOnly="True" Width="80">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding date, Mode=TwoWay}"
+                      Header="Date" x:Name="grdDate" IsReadOnly="True" Width="80">
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding concerne, Mode=TwoWay}"
+                      Header="Concerne" x:Name="grdConcerne" IsReadOnly="True"  Width="150">
+                </DataGridTextColumn>
+                <!--<DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Update" x:Name="btnUpdate"
+                                Click="btnUpdate_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Delete" x:Name="btnDelete"
+                                Click="btnDelete_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Height="55" HorizontalAlignment="Left" Margin="0,553,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="747" Orientation="Horizontal" Background="#FF86B5E8">
+            <Button Margin="260,10,10,10" Content="Etat" Height="32" Name="cmdEtat" Width="198" Click="etat_Click" />
+        </StackPanel>
+        <Button Margin="600,47,12,538" Content="Valider" Height="23" Name="cmdValider" Click="valider_Click" />
+        <Button Margin="600,119,12,466" Content="Annuler" Height="23" Name="cmdAnnuler" Click="annuler_Click" />
+        <Button Content="Fermer" Height="23" HorizontalAlignment="Left" Margin="600,197,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="135" Click="cmdFermer_Click" />
+    </Grid>
+</Window>

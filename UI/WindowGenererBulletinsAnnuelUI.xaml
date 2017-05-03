@@ -1,0 +1,42 @@
+﻿<Window x:Class="Ecole.UI.WindowGenererBulletinsAnnuelUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="School brain : Génération des Bulletins Annuels" Height="327" Width="454" WindowStartupLocation="CenterScreen" Background="#FFD0DAE5" ResizeMode="CanMinimize">
+
+    <!--<Window.Background>
+        <ImageBrush ImageSource="/Projet%20Ecole;component/Images/university.jpg" />
+    </Window.Background>-->
+        <StackPanel Background="#FFC8DDE2" Orientation="Vertical" Width="431" Height="289">
+            <GroupBox Header="Informations obligatoires" Height="175" Name="groupBox1" Width="302" Margin="15,5">
+                <Grid Height="117" Name="grid1" Width="275" Background="#FF86B5E8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Classe (*)" Height="28" HorizontalAlignment="Left" Name="lblClasse" VerticalAlignment="Top" Width="97" Margin="6,10,0,0" />
+                    <Label Content="Année (*)" Height="23" HorizontalAlignment="Left" Name="lblAnnee" VerticalAlignment="Top" Width="95" Margin="8,13,0,0" Grid.Row="1" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="128,13,0,0" Name="cmbClasse" VerticalAlignment="Top" Width="135" Grid.ColumnSpan="2" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="130,13,0,0" Name="txtAnneeScolaire" VerticalAlignment="Top" Width="54" Grid.Row="1" TextChanged="txtAnneeScolaire_TextChanged" Grid.ColumnSpan="2" PreviewTextInput="txtAnneeScolaire_PreviewTextInput" />
+                <Label Content="/" Grid.Column="1" Grid.Row="1" Height="26" HorizontalAlignment="Left" Margin="52,13,0,0" Name="label1" VerticalAlignment="Top" Width="20" />
+                <TextBox IsEnabled="False" Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="66,13,0,0" Name="txtAnnee" VerticalAlignment="Top" Width="60" PreviewTextInput="txtAnnee_PreviewTextInput" Grid.Row="1" />
+                    <Button Content="Valider" Height="24" HorizontalAlignment="Left" Margin="6,9,0,0" Name="cmdValider" VerticalAlignment="Top" Width="106" Click="cmdValider_Click" Grid.Row="2" />
+                    <Button Content="Annuler" Name="cmdAnnuler" Width="106" Click="cmdAnnuler_Click" Margin="20,9,11,6" Grid.Row="2" Grid.Column="1" />
+                </Grid>
+            </GroupBox>
+            <ProgressBar Height="22" Name="ProgressBar1" Width="300" />
+            <Grid Height="40" Name="grid" Background="#FF86B5E8" Margin="0,40" Width="426">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="182*" />
+                </Grid.ColumnDefinitions>
+                <Button Content="Fermer" Height="29" HorizontalAlignment="Left" Margin="144,6,0,0" Name="cmdFermer" VerticalAlignment="Top" Width="152" Click="cmdFermer_Click" />
+            </Grid>
+        </StackPanel>
+</Window>
